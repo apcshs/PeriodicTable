@@ -1,4 +1,3 @@
-
 .maindiv
 {
     background-color: #282C34;
@@ -7,6 +6,8 @@
     right: 0px;
     top: 0px;
     bottom: 0px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .banner
@@ -31,6 +32,8 @@
     color:#000000;
     font-family: sans-serif;
     padding:4px;
+    flex: 1;
+    margin: 10px;
 }
 
 .leftdiv
@@ -41,6 +44,8 @@
     width:140px;
     bottom:8px;
     overflow:auto;
+    flex: 1;
+    margin: 10px;
 }
 
 .rightdiv
@@ -51,6 +56,8 @@
     width:140px;
     bottom:8px;
     overflow:auto;
+    flex: 1;
+    margin: 10px;
 }
 
 .linkpanel
@@ -349,4 +356,51 @@ input[type=radio]
 .pblock
 {
     background-color: #fdff8c;
+}
+
+/* General styles for larger screens */
+.maindiv {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.leftdiv, .rightdiv, .tablediv {
+    flex: 1;
+    margin: 10px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+/* smaller screens */
+@media (max-width: 600px) {
+    .maindiv {
+        flex-direction: column;
+    }
+
+    .leftdiv, .rightdiv, .tablediv {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    table {
+        width: 100%;
+        overflow-x: auto;
+        display: block;
+    }
+
+    .label, .button, .colorkey {
+        font-size: 14px;
+    }
+
+    .linkpanel a {
+        display: none;
+    }
+
+    .infobox {
+        width: 90%;
+        left: 5%;
+        transform: translate(0, -50%);
+    }
 }
