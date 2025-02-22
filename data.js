@@ -1,5 +1,4 @@
-const periodictabledata =
-[
+const periodictabledata = [
     {
         name: "Hydrogen",
         atomicnumber: 1,
@@ -14,7 +13,9 @@ const periodictabledata =
         block: "s",
         tablerow18col: 1,
         tablecolumn18col: 1,
-        visible: true
+        visible: true,
+        electronConfiguration: "1s¹",
+        valenceElectrons: 1
     },
     {
         name: "Helium",
@@ -30,7 +31,9 @@ const periodictabledata =
         block: "s",
         tablerow18col: 1,
         tablecolumn18col: 18,
-        visible: true
+        visible: true,
+        electronConfiguration: "1s²",
+        valenceElectrons: 2
     },
     {
         name: "Lithium",
@@ -46,7 +49,9 @@ const periodictabledata =
         block: "s",
         tablerow18col: 2,
         tablecolumn18col: 1,
-        visible: true
+        visible: true,
+        electronConfiguration: "(He)2s¹",
+        valenceElectrons: 1
     },
     {
         name: "Beryllium",
@@ -62,7 +67,9 @@ const periodictabledata =
         block: "s",
         tablerow18col: 2,
         tablecolumn18col: 2,
-        visible: true
+        visible: true,
+        electronConfiguration: "(He)2s²",
+        valenceElectrons: 2
     },
     {
         name: "Boron",
@@ -78,7 +85,9 @@ const periodictabledata =
         block: "p",
         tablerow18col: 2,
         tablecolumn18col: 13,
-        visible: true
+        visible: true,
+        electronConfiguration: "(He)2s²2p¹",
+        valenceElectrons: 3
     },
     {
         name: "Carbon",
@@ -94,7 +103,9 @@ const periodictabledata =
         block: "p",
         tablerow18col: 2,
         tablecolumn18col: 14,
-        visible: true
+        visible: true,
+        electronConfiguration: "(He)2s²2p²",
+        valenceElectrons: 4
     },
     {
         name: "Nitrogen",
@@ -110,7 +121,9 @@ const periodictabledata =
         block: "p",
         tablerow18col: 2,
         tablecolumn18col: 15,
-        visible: true
+        visible: true,
+        electronConfiguration: "(He)2s²2p³",
+        valenceElectrons: 5
     },
     {
         name: "Oxygen",
@@ -126,7 +139,9 @@ const periodictabledata =
         block: "p",
         tablerow18col: 2,
         tablecolumn18col: 16,
-        visible: true
+        visible: true,
+        electronConfiguration: "(He)2s²2p⁴",
+        valenceElectrons: 6
     },
     {
         name: "Fluorine",
@@ -142,7 +157,10 @@ const periodictabledata =
         block: "p",
         tablerow18col: 2,
         tablecolumn18col: 17,
-        visible: true
+        visible: true,
+        electronConfiguration: "(He)2s²2p⁵",
+        valenceElectrons: 7
+        
     },
     {
         name: "Neon",
@@ -158,7 +176,9 @@ const periodictabledata =
         block: "p",
         tablerow18col: 2,
         tablecolumn18col: 18,
-        visible: true
+        visible: true,
+        electronConfiguration: "(He)2s²2p⁶",
+        valenceElectrons: 8
     },
     {
         name: "Sodium",
@@ -174,7 +194,9 @@ const periodictabledata =
         block: "s",
         tablerow18col: 3,
         tablecolumn18col: 1,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Ne)3s¹",
+        valenceElectrons: 1
     },
     {
         name: "Magnesium",
@@ -190,7 +212,9 @@ const periodictabledata =
         block: "s",
         tablerow18col: 3,
         tablecolumn18col: 2,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Ne)3s²",
+        valenceElectrons: 2
     },
     {
         name: "Aluminium",
@@ -206,7 +230,9 @@ const periodictabledata =
         block: "p",
         tablerow18col: 3,
         tablecolumn18col: 13,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Ne)3s²3p¹",
+        valenceElectrons: 3,
     },
     {
         name: "Silicon",
@@ -222,7 +248,9 @@ const periodictabledata =
         block: "p",
         tablerow18col: 3,
         tablecolumn18col: 14,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Ne)3s²3p²",
+        valenceElectrons: 4
     },
     {
         name: "Phosphorus",
@@ -238,7 +266,9 @@ const periodictabledata =
         block: "p",
         tablerow18col: 3,
         tablecolumn18col: 15,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Ne)3s²3p³",
+        valenceElectrons: 5
     },
     {
         name: "Sulfur",
@@ -254,7 +284,9 @@ const periodictabledata =
         block: "p",
         tablerow18col: 3,
         tablecolumn18col: 16,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Ne)3s²3p⁴",
+        valenceElectrons: 6
     },
     {
         name: "Chlorine",
@@ -270,7 +302,9 @@ const periodictabledata =
         block: "p",
         tablerow18col: 3,
         tablecolumn18col: 17,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Ne)3s²3p⁵",
+        valenceElectrons: 7
     },
     {
         name: "Argon",
@@ -286,7 +320,9 @@ const periodictabledata =
         block: "p",
         tablerow18col: 3,
         tablecolumn18col: 18,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Ne)3s²3p⁶",
+        valenceElectrons: 8
     },
     {
         name: "Potassium",
@@ -302,7 +338,9 @@ const periodictabledata =
         block: "s",
         tablerow18col: 4,
         tablecolumn18col: 1,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Ar)4s¹",
+        valenceElectrons: 1
     },
     {
         name: "Calcium",
@@ -318,7 +356,9 @@ const periodictabledata =
         block: "s",
         tablerow18col: 4,
         tablecolumn18col: 2,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Ar)4s²",
+        valenceElectrons: 2
     },
     {
         name: "Scandium",
@@ -334,7 +374,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 4,
         tablecolumn18col: 3,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Ar)3d¹4s²",
+        valenceElectrons: 3
     },
     {
         name: "Titanium",
@@ -350,7 +392,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 4,
         tablecolumn18col: 4,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Ar)3d²4s²",
+        valenceElectrons: 4
     },
     {
         name: "Vanadium",
@@ -366,7 +410,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 4,
         tablecolumn18col: 5,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Ar)3d³4s²",
+        valenceElectrons: 5
     },
     {
         name: "Chromium",
@@ -382,7 +428,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 4,
         tablecolumn18col: 6,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Ar)3d⁵4s¹",
+        valenceElectrons: 6
     },
     {
         name: "Manganese",
@@ -398,7 +446,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 4,
         tablecolumn18col: 7,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Ar)3d⁵4s²",
+        valenceElectrons: 7
     },
     {
         name: "Iron",
@@ -414,7 +464,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 4,
         tablecolumn18col: 8,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Ar)3d⁶4s²",
+        valenceElectrons: 8
     },
     {
         name: "Cobalt",
@@ -430,7 +482,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 4,
         tablecolumn18col: 9,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Ar)3d⁷4s²",
+        valenceElectrons: 9
     },
     {
         name: "Nickel",
@@ -446,7 +500,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 4,
         tablecolumn18col: 10,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Ar)3d⁸4s²",
+        valenceElectrons: 10
     },
     {
         name: "Copper",
@@ -462,7 +518,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 4,
         tablecolumn18col: 11,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Ar)3d¹⁰4s¹",
+        valenceElectrons: 11
     },
     {
         name: "Zinc",
@@ -478,7 +536,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 4,
         tablecolumn18col: 12,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Ar)3d¹⁰4s²",
+        valenceElectrons: 12
     },
     {
         name: "Gallium",
@@ -494,7 +554,9 @@ const periodictabledata =
         block: "p",
         tablerow18col: 4,
         tablecolumn18col: 13,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Ar)3d¹⁰4s²4p¹",
+        valenceElectrons: 13
     },
     {
         name: "Germanium",
@@ -510,7 +572,9 @@ const periodictabledata =
         block: "p",
         tablerow18col: 4,
         tablecolumn18col: 14,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Ar)3d¹⁰4s²4p²",
+        valenceElectrons: 14
     },
     {
         name: "Arsenic",
@@ -526,7 +590,9 @@ const periodictabledata =
         block: "p",
         tablerow18col: 4,
         tablecolumn18col: 15,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Ar)3d¹⁰4s²4p³",
+        valenceElectrons: 15
     },
     {
         name: "Selenium",
@@ -542,7 +608,9 @@ const periodictabledata =
         block: "p",
         tablerow18col: 4,
         tablecolumn18col: 16,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Ar)3d¹⁰4s²4p⁴",
+        valenceElectrons: 16
     },
     {
         name: "Bromine",
@@ -558,7 +626,9 @@ const periodictabledata =
         block: "p",
         tablerow18col: 4,
         tablecolumn18col: 17,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Ar)3d¹⁰4s²4p⁵",
+        valenceElectrons: 17
     },
     {
         name: "Krypton",
@@ -574,7 +644,9 @@ const periodictabledata =
         block: "p",
         tablerow18col: 4,
         tablecolumn18col: 18,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Ar)3d¹⁰4s²4p⁶",
+        valenceElectrons: 18
     },
     {
         name: "Rubidium",
@@ -590,7 +662,9 @@ const periodictabledata =
         block: "s",
         tablerow18col: 5,
         tablecolumn18col: 1,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Kr)5s¹",
+        valenceElectrons: 1
     },
     {
         name: "Strontium",
@@ -606,7 +680,9 @@ const periodictabledata =
         block: "s",
         tablerow18col: 5,
         tablecolumn18col: 2,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Kr)5s²",
+        valenceElectrons: 2
     },
     {
         name: "Yttrium",
@@ -622,7 +698,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 5,
         tablecolumn18col: 3,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Kr)4d¹5s²",
+        valenceElectrons: 3
     },
     {
         name: "Zirconium",
@@ -638,7 +716,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 5,
         tablecolumn18col: 4,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Kr)4d²5s²",
+        valenceElectrons: 4
     },
     {
         name: "Niobium",
@@ -654,7 +734,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 5,
         tablecolumn18col: 5,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Kr)4d⁴5s¹",
+        valenceElectrons: 5
     },
     {
         name: "Molybdenum",
@@ -670,7 +752,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 5,
         tablecolumn18col: 6,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Kr)4d⁵5s¹",
+        valenceElectrons: 6
     },
     {
         name: "Technetium",
@@ -686,7 +770,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 5,
         tablecolumn18col: 7,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Kr)4d⁵5s²",
+        valenceElectrons: 7
     },
     {
         name: "Ruthenium",
@@ -702,7 +788,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 5,
         tablecolumn18col: 8,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Kr)4d⁷5s¹",
+        valenceElectrons: 8
     },
     {
         name: "Rhodium",
@@ -718,7 +806,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 5,
         tablecolumn18col: 9,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Kr)4d⁸5s¹",
+        valenceElectrons: 9
     },
     {
         name: "Palladium",
@@ -734,7 +824,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 5,
         tablecolumn18col: 10,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Kr)4d¹⁰5s⁰",
+        valenceElectrons: 10
     },
     {
         name: "Silver",
@@ -750,7 +842,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 5,
         tablecolumn18col: 11,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Kr)4d¹⁰5s¹",
+        valenceElectrons: 11
     },
     {
         name: "Cadmium",
@@ -766,7 +860,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 5,
         tablecolumn18col: 12,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Kr)4d¹⁰5s²",
+        valenceElectrons: 12
     },
     {
         name: "Indium",
@@ -782,7 +878,9 @@ const periodictabledata =
         block: "p",
         tablerow18col: 5,
         tablecolumn18col: 13,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Kr)4d¹⁰5s²5p¹",
+        valenceElectrons: 13
     },
     {
         name: "Tin",
@@ -798,7 +896,9 @@ const periodictabledata =
         block: "p",
         tablerow18col: 5,
         tablecolumn18col: 14,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Kr)4d¹⁰5s²5p²",
+        valenceElectrons: 14
     },
     {
         name: "Antimony",
@@ -814,7 +914,9 @@ const periodictabledata =
         block: "p",
         tablerow18col: 5,
         tablecolumn18col: 15,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Kr)4d¹⁰5s²5p³",
+        valenceElectrons: 15
     },
     {
         name: "Tellurium",
@@ -830,7 +932,9 @@ const periodictabledata =
         block: "p",
         tablerow18col: 5,
         tablecolumn18col: 16,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Kr)4d¹⁰5s²5p⁴",
+        valenceElectrons: 16
     },
     {
         name: "Iodine",
@@ -846,7 +950,9 @@ const periodictabledata =
         block: "p",
         tablerow18col: 5,
         tablecolumn18col: 17,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Kr)4d¹⁰5s²5p⁵",
+        valenceElectrons: 17
     },
     {
         name: "Xenon",
@@ -862,7 +968,9 @@ const periodictabledata =
         block: "p",
         tablerow18col: 5,
         tablecolumn18col: 18,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Kr)4d¹⁰5s²5p⁶",
+        valenceElectrons: 18
     },
     {
         name: "Caesium",
@@ -878,7 +986,9 @@ const periodictabledata =
         block: "s",
         tablerow18col: 6,
         tablecolumn18col: 1,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Xe)6s¹",
+        valenceElectrons: 1
     },
     {
         name: "Barium",
@@ -894,7 +1004,9 @@ const periodictabledata =
         block: "s",
         tablerow18col: 6,
         tablecolumn18col: 2,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Xe)6s²",
+        valenceElectrons: 2
     },
     {
         name: "Lanthanum",
@@ -910,7 +1022,9 @@ const periodictabledata =
         block: "f",
         tablerow18col: 8,
         tablecolumn18col: 3,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Xe)5d¹6s²",
+        valenceElectrons: 3
     },
     {
         name: "Cerium",
@@ -926,7 +1040,9 @@ const periodictabledata =
         block: "f",
         tablerow18col: 8,
         tablecolumn18col: 4,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Xe)4f¹5d¹6s²",
+        valenceElectrons: 4
     },
     {
         name: "Praseodymium",
@@ -942,7 +1058,9 @@ const periodictabledata =
         block: "f",
         tablerow18col: 8,
         tablecolumn18col: 5,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Xe)4f³5d¹6s²",
+        valenceElectrons: 5
     },
     {
         name: "Neodymium",
@@ -958,7 +1076,9 @@ const periodictabledata =
         block: "f",
         tablerow18col: 8,
         tablecolumn18col: 6,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Xe)4f⁴5d¹6s²",
+        valenceElectrons: 6
     },
     {
         name: "Promethium",
@@ -974,7 +1094,9 @@ const periodictabledata =
         block: "f",
         tablerow18col: 8,
         tablecolumn18col: 7,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Xe)4f⁵5d¹6s²",
+        valenceElectrons: 7
     },
     {
         name: "Samarium",
@@ -990,7 +1112,9 @@ const periodictabledata =
         block: "f",
         tablerow18col: 8,
         tablecolumn18col: 8,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Xe)4f⁶5d¹6s²",
+        valenceElectrons: 8
     },
     {
         name: "Europium",
@@ -1006,7 +1130,9 @@ const periodictabledata =
         block: "f",
         tablerow18col: 8,
         tablecolumn18col: 9,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Xe)4f⁷5d¹6s²",
+        valenceElectrons: 9
     },
     {
         name: "Gadolinium",
@@ -1022,7 +1148,9 @@ const periodictabledata =
         block: "f",
         tablerow18col: 8,
         tablecolumn18col: 10,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Xe)4f⁷5d¹6s²",
+        valenceElectrons: 10
     },
     {
         name: "Terbium",
@@ -1038,7 +1166,9 @@ const periodictabledata =
         block: "f",
         tablerow18col: 8,
         tablecolumn18col: 11,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Xe)4f⁹5d¹6s²",
+        valenceElectrons: 11
     },
     {
         name: "Dysprosium",
@@ -1054,7 +1184,9 @@ const periodictabledata =
         block: "f",
         tablerow18col: 8,
         tablecolumn18col: 12,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Xe)4f¹⁰5d¹6s²",
+        valenceElectrons: 12
     },
     {
         name: "Holmium",
@@ -1070,7 +1202,9 @@ const periodictabledata =
         block: "f",
         tablerow18col: 8,
         tablecolumn18col: 13,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Xe)4f¹¹5d¹6s²",
+        valenceElectrons: 13
     },
     {
         name: "Erbium",
@@ -1086,7 +1220,9 @@ const periodictabledata =
         block: "f",
         tablerow18col: 8,
         tablecolumn18col: 14,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Xe)4f¹²5d¹6s²",
+        valenceElectrons: 14
     },
     {
         name: "Thulium",
@@ -1102,7 +1238,9 @@ const periodictabledata =
         block: "f",
         tablerow18col: 8,
         tablecolumn18col: 15,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Xe)4f¹³5d¹6s²",
+        valenceElectrons: 15
     },
     {
         name: "Ytterbium",
@@ -1118,7 +1256,9 @@ const periodictabledata =
         block: "f",
         tablerow18col: 8,
         tablecolumn18col: 16,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Xe)4f¹⁴5d¹6s²",
+        valenceElectrons: 16
     },
     {
         name: "Lutenium",
@@ -1134,7 +1274,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 6,
         tablecolumn18col: 3,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Xe)4f¹⁴5d¹6s²",
+        valenceElectrons: 17
     },
     {
         name: "Hafnium",
@@ -1150,7 +1292,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 6,
         tablecolumn18col: 4,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Xe)4f¹⁴5d²6s²",
+        valenceElectrons: 18
     },
     {
         name: "Tantalum",
@@ -1166,7 +1310,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 6,
         tablecolumn18col: 5,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Xe)4f¹⁴5d³6s²",
+        valenceElectrons: 19
     },
     {
         name: "Tungsten",
@@ -1182,7 +1328,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 6,
         tablecolumn18col: 6,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Xe)4f¹⁴5d⁴6s²",
+        valenceElectrons: 20
     },
     {
         name: "Rhenium",
@@ -1198,7 +1346,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 6,
         tablecolumn18col: 7,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Xe)4f¹⁴5d⁵6s²",
+        valenceElectrons: 21
     },
     {
         name: "Osmium",
@@ -1214,7 +1364,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 6,
         tablecolumn18col: 8,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Xe)4f¹⁴5d⁶6s²",
+        valenceElectrons: 22
     },
     {
         name: "Iridium",
@@ -1230,7 +1382,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 6,
         tablecolumn18col: 9,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Xe)4f¹⁴5d⁷6s²",
+        valenceElectrons: 23
     },
     {
         name: "Platinum",
@@ -1246,7 +1400,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 6,
         tablecolumn18col: 10,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Xe)4f¹⁴5d⁹6s¹",
+        valenceElectrons: 24
     },
     {
         name: "Gold",
@@ -1262,7 +1418,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 6,
         tablecolumn18col: 11,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Xe)4f¹⁴5d¹⁰6s¹",
+        valenceElectrons: 25
     },
     {
         name: "Mercury",
@@ -1278,7 +1436,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 6,
         tablecolumn18col: 12,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Xe)4f¹⁴5d¹⁰6s²",
+        valenceElectrons: 26
     },
     {
         name: "Thallium",
@@ -1294,7 +1454,9 @@ const periodictabledata =
         block: "p",
         tablerow18col: 6,
         tablecolumn18col: 13,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Xe)4f¹⁴5d¹⁰6s²6p¹",
+        valenceElectrons: 27
     },
     {
         name: "Lead",
@@ -1310,7 +1472,9 @@ const periodictabledata =
         block: "p",
         tablerow18col: 6,
         tablecolumn18col: 14,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Xe)4f¹⁴5d¹⁰6s²6p²",
+        valenceElectrons: 28
     },
     {
         name: "Bismuth",
@@ -1326,7 +1490,9 @@ const periodictabledata =
         block: "p",
         tablerow18col: 6,
         tablecolumn18col: 15,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Xe)4f¹⁴5d¹⁰6s²6p³",
+        valenceElectrons: 29
     },
     {
         name: "Polonium",
@@ -1342,7 +1508,9 @@ const periodictabledata =
         block: "p",
         tablerow18col: 6,
         tablecolumn18col: 16,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Xe)4f¹⁴5d¹⁰6s²6p⁴",
+        valenceElectrons: 30
     },
     {
         name: "Astatine",
@@ -1358,7 +1526,9 @@ const periodictabledata =
         block: "p",
         tablerow18col: 6,
         tablecolumn18col: 17,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Xe)4f¹⁴5d¹⁰6s²6p⁵",
+        valenceElectrons: 31
     },
     {
         name: "Radon",
@@ -1374,7 +1544,9 @@ const periodictabledata =
         block: "p",
         tablerow18col: 6,
         tablecolumn18col: 18,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Xe)4f¹⁴5d¹⁰6s²6p⁶",
+        valenceElectrons: 32
     },
     {
         name: "Francium",
@@ -1390,7 +1562,9 @@ const periodictabledata =
         block: "s",
         tablerow18col: 7,
         tablecolumn18col: 1,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Rn)7s¹",
+        valenceElectrons: 1
     },
     {
         name: "Radium",
@@ -1406,7 +1580,9 @@ const periodictabledata =
         block: "s",
         tablerow18col: 7,
         tablecolumn18col: 2,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Rn)7s²",
+        valenceElectrons: 2
     },
     {
         name: "Actinium",
@@ -1422,7 +1598,9 @@ const periodictabledata =
         block: "f",
         tablerow18col: 9,
         tablecolumn18col: 3,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Rn)6d¹7s²",
+        valenceElectrons: 3
     },
     {
         name: "Thorium",
@@ -1438,7 +1616,9 @@ const periodictabledata =
         block: "f",
         tablerow18col: 9,
         tablecolumn18col: 4,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Rn)6d²7s²",
+        valenceElectrons: 4
     },
     {
         name: "Protactinium",
@@ -1454,7 +1634,9 @@ const periodictabledata =
         block: "f",
         tablerow18col: 9,
         tablecolumn18col: 5,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Rn)5f²6d¹7s²",
+        valenceElectrons: 5
     },
     {
         name: "Uranium",
@@ -1470,7 +1652,9 @@ const periodictabledata =
         block: "f",
         tablerow18col: 9,
         tablecolumn18col: 6,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Rn)5f³6d¹7s²",
+        valenceElectrons: 6
     },
     {
         name: "Neptunium",
@@ -1486,7 +1670,9 @@ const periodictabledata =
         block: "f",
         tablerow18col: 9,
         tablecolumn18col: 7,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Rn)5f⁴6d¹7s²",
+        valenceElectrons: 7
     },
     {
         name: "Plutonium",
@@ -1502,7 +1688,9 @@ const periodictabledata =
         block: "f",
         tablerow18col: 9,
         tablecolumn18col: 8,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Rn)5f⁶7s²",
+        valenceElectrons: 8
     },
     {
         name: "Americium",
@@ -1518,7 +1706,9 @@ const periodictabledata =
         block: "f",
         tablerow18col: 9,
         tablecolumn18col: 9,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Rn)5f⁷7s²",
+        valenceElectrons: 9
     },
     {
         name: "Curium",
@@ -1534,7 +1724,9 @@ const periodictabledata =
         block: "f",
         tablerow18col: 9,
         tablecolumn18col: 10,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Rn)5f⁷7s²",
+        valenceElectrons: 10
     },
     {
         name: "Berkelium",
@@ -1550,7 +1742,9 @@ const periodictabledata =
         block: "f",
         tablerow18col: 9,
         tablecolumn18col: 11,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Rn)5f⁹7s²",
+        valenceElectrons: 11
     },
     {
         name: "Californium",
@@ -1566,7 +1760,9 @@ const periodictabledata =
         block: "f",
         tablerow18col: 9,
         tablecolumn18col: 12,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Rn)5f¹⁰7s²",
+        valenceElectrons: 12
     },
     {
         name: "Einsteinium",
@@ -1582,7 +1778,9 @@ const periodictabledata =
         block: "f",
         tablerow18col: 9,
         tablecolumn18col: 13,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Rn)5f¹¹7s²",
+        valenceElectrons: 13
     },
     {
         name: "Fermium",
@@ -1598,7 +1796,9 @@ const periodictabledata =
         block: "f",
         tablerow18col: 9,
         tablecolumn18col: 14,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Rn)5f¹²7s²",
+        valenceElectrons: 14
     },
     {
         name: "Mendelevium",
@@ -1614,7 +1814,9 @@ const periodictabledata =
         block: "f",
         tablerow18col: 9,
         tablecolumn18col: 15,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Rn)5f¹³7s²",
+        valenceElectrons: 15
     },
     {
         name: "Nobelium",
@@ -1630,7 +1832,9 @@ const periodictabledata =
         block: "f",
         tablerow18col: 9,
         tablecolumn18col: 16,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Rn)5f¹⁴7s²",
+        valenceElectrons: 16
     },
     {
         name: "Lawrencium",
@@ -1646,7 +1850,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 7,
         tablecolumn18col: 3,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Rn)5f¹⁴6d¹7s²",
+        valenceElectrons: 17
     },
     {
         name: "Rutherfordium",
@@ -1662,7 +1868,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 7,
         tablecolumn18col: 4,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Rn)5f¹⁴6d²7s²",
+        valenceElectrons: 18
     },
     {
         name: "Dubnium",
@@ -1678,7 +1886,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 7,
         tablecolumn18col: 5,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Rn)5f¹⁴6d³7s²",
+        valenceElectrons: 19
     },
     {
         name: "Seaborgium",
@@ -1694,7 +1904,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 7,
         tablecolumn18col: 6,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Rn)5f¹⁴6d⁴7s²",
+        valenceElectrons: 20
     },
     {
         name: "Bohrium",
@@ -1710,7 +1922,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 7,
         tablecolumn18col: 7,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Rn)5f¹⁴6d⁵7s²",
+        valenceElectrons: 21
     },
     {
         name: "Hassium",
@@ -1726,7 +1940,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 7,
         tablecolumn18col: 8,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Rn)5f¹⁴6d⁶7s²",
+        valenceElectrons: 22
     },
     {
         name: "Meitnerium",
@@ -1742,7 +1958,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 7,
         tablecolumn18col: 9,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Rn)5f¹⁴6d⁷7s²",
+        valenceElectrons: 23
     },
     {
         name: "Darmstadtium",
@@ -1758,7 +1976,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 7,
         tablecolumn18col: 10,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Rn)5f¹⁴6d⁸7s²",
+        valenceElectrons: 24
     },
     {
         name: "Roentgenium",
@@ -1774,7 +1994,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 7,
         tablecolumn18col: 11,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Rn)5f¹⁴6d⁹7s²",
+        valenceElectrons: 25
     },
     {
         name: "Copernicum",
@@ -1790,7 +2012,9 @@ const periodictabledata =
         block: "d",
         tablerow18col: 7,
         tablecolumn18col: 12,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Rn)5f¹⁴6d¹⁰7s²",
+        valenceElectrons: 26
     },
     {
         name: "Nihonium",
@@ -1806,7 +2030,9 @@ const periodictabledata =
         block: "p",
         tablerow18col: 7,
         tablecolumn18col: 13,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Rn)5f¹⁴6d¹⁰7s²7p¹",
+        valenceElectrons: 27
     },
     {
         name: "Flerovium",
@@ -1822,7 +2048,9 @@ const periodictabledata =
         block: "p",
         tablerow18col: 7,
         tablecolumn18col: 14,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Rn)5f¹⁴6d¹⁰7s²7p²",
+        valenceElectrons: 28
     },
     {
         name: "Moscovium",
@@ -1838,7 +2066,9 @@ const periodictabledata =
         block: "p",
         tablerow18col: 7,
         tablecolumn18col: 15,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Rn)5f¹⁴6d¹⁰7s²7p³",
+        valenceElectrons: 29
     },
     {
         name: "Livermorium",
@@ -1854,7 +2084,9 @@ const periodictabledata =
         block: "p",
         tablerow18col: 7,
         tablecolumn18col: 16,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Rn)5f¹⁴6d¹⁰7s²7p⁴",
+        valenceElectrons: 30
     },
     {
         name: "Tennessine",
@@ -1870,7 +2102,9 @@ const periodictabledata =
         block: "p",
         tablerow18col: 7,
         tablecolumn18col: 17,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Rn)5f¹⁴6d¹⁰7s²7p⁵",
+        valenceElectrons: 31
     },
     {
         name: "Oganesson",
@@ -1886,6 +2120,8 @@ const periodictabledata =
         block: "p",
         tablerow18col: 7,
         tablecolumn18col: 18,
-        visible: true
+        visible: true,
+        electronConfiguration: "(Rn)5f¹⁴6d¹⁰7s²7p⁶",
+        valenceElectrons: 32
     },
 ]
