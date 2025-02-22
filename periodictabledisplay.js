@@ -1,11 +1,11 @@
-﻿class PeriodicTableDisplay
+class PeriodicTableDisplay
 {
 	constructor(periodictable, tableid, infoboxbackgroundid, infoboxid)
 	{
 		this._periodictable = periodictable;
         this._tableid = tableid;
 
-		this._periodictable.AddFilterChangedEventHandler(this._onFilterChanged);
+		this._periodictable.AddFilterChangedEventHandler(this._onFilterChanged.bind(this));
 
 		this._infobox = new PeriodicTableInfoBox(periodictable, infoboxbackgroundid, infoboxid);
 
@@ -57,11 +57,11 @@
 
 			if(target.classList.contains("elementcell"))
 			{
+				console.log("Element clicked:", target.dataset.atomicnumber);
 				this._infobox.Show(target.dataset.atomicnumber);
 			}
 		});
     }
-
 
 	_onFilterChanged(changed)
 	{
@@ -74,7 +74,6 @@
 			currentcell.classList.toggle("elementcellfaded");
 		}
 	}
-
 
 	_createCells()
 	{
@@ -102,7 +101,6 @@
 		}
 	}
 
-
 	_createColumnHeadings()
 	{
 		for(let column = 1; column <= 18; column++)
@@ -113,7 +111,6 @@
 		}
 	}
 
-
 	_createRowHeadings()
 	{
 		for(let row = 1; row <= 7; row++)
@@ -123,7 +120,6 @@
 			currentcell.classList.add("headingcell");
 		}
 	}
-
 
     _populate()
     {
@@ -163,7 +159,6 @@
 		this.ColorByBlock();
     }
 
-
 	ColorByCategory()
 	{
         for(let element of this._periodictable.data)
@@ -178,7 +173,6 @@
 			currentcell.classList.add(this._categoryClassMappings[element.category]);
 		}
 	}
-
 
 	ColorByBlock()
 	{
