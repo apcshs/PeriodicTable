@@ -17,18 +17,15 @@ class PeriodicTableInfoBox
 		document.getElementById("btnCloseInfoBox").onclick = () => this.Hide();
     }
 
-
 	Hide()
 	{
 		document.getElementById(this._infoboxid).style.visibility = "hidden";
 		document.getElementById(this._infoboxbackgroundid).style.visibility = "hidden";
 	}
 
-
-	Show(atomicnumber)
-	{
+	Show(atomicnumber) {
 		const element = this._periodictable.GetElement(atomicnumber);
-
+	
 		document.getElementById("infoName").innerHTML = element.name;
 		document.getElementById("infoAtomicNumber").innerHTML = element.atomicnumber;
 		document.getElementById("infoChemicalSymbol").innerHTML = element.symbol;
@@ -40,8 +37,10 @@ class PeriodicTableInfoBox
 		document.getElementById("infoGroup").innerHTML = element.group;
 		document.getElementById("infoPeriod").innerHTML = element.period;
 		document.getElementById("infoBlock").innerHTML = element.block;
-
+		document.getElementById("infoElectronConfiguration").innerHTML = element.electronConfiguration;
+		document.getElementById("infoValenceElectrons").innerHTML = element.valenceElectrons;
+	
 		document.getElementById(this._infoboxbackgroundid).style.visibility = "visible";
 		document.getElementById(this._infoboxid).style.visibility = "visible";
 	}
-}
+	}
