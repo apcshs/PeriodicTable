@@ -1,4 +1,4 @@
-﻿class PeriodicTable
+class PeriodicTable
 {
 	constructor()
 	{
@@ -85,7 +85,9 @@
 
 	GetElement(atomicnumber)
 	{
-		return this._data[atomicnumber - 1];
+		const element = this._data.find(el => el.atomicnumber == atomicnumber);
+		console.log("Fetched element:", element);
+		return element;
 	}
 
 	//-----------------------------------------------------------------
