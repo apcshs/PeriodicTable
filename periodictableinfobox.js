@@ -68,11 +68,13 @@ class PeriodicTableInfoBox
             imageText = `<em>Potassium is used as a liquid medication because it helps maintain proper muscle and nerve function, especially for people with low potassium levels. It is essential for heart health, fluid balance, and cell function. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "Ca") {
             imageUrl = "https://media.post.rvohealth.io/wp-content/uploads/2020/08/642x361_IMAGE_1_8_Fast_Facts_About_Calcium.jpg";
-            imageText = `<em>Calcium is used in supplements because it is essential for strong bones and teeth, muscle function, nerve signaling, and blood clotting. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
+            imageText = `<em>Primarily found in dairy products like milk, cheese, and yogurt, calcium is crucial for building and maintaining strong bones and teeth. It also plays a key role in muscle function, nerve transmission, and blood clotting. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "Rb") {
             imageUrl = "https://study.com/cimages/multimages/16/rsz_purple.jpg";
+            imageText = `<em>Rubidium is used in fireworks to produce vibrant purple colors. It is one of the alkali metals and, when burned, produces a distinctive and visually stunning flame that adds to the display's overall effect. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "Sr") {
             imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIw-8tN3B72LF081VNnBk5tnz-ZVS7IKHWRbGRajo0Bsm79kwtFnfWeY8Iil_cXpvWxrI&usqp=CAU";
+            imageText = `<em>Strontium is used in toothpaste for sensitive teeth, helping to reduce discomfort caused by exposed nerves. It is also found in red-colored fireworks due to its ability to produce intense red hues when burned. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "Cs") {
             imageUrl = "https://optica.africa/cdn/shop/files/CESIUMC25-P81___FRONT_1200x1200.jpg?v=1709721702";
             imageText = `<em>Cesium is used to create optical lenses and prisms for high refractive index glasses.  Glass can also be polished or decolored with it.<br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
@@ -81,8 +83,10 @@ class PeriodicTableInfoBox
             imageText = `<em>The image shows an MMR scanner powered by radium, used historically in early medical imaging before being replaced by safer technologies. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "Sc") {
             imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZkOUiLmwl3q6cIfXEPEkl1hsSduMD6PPaLviLr38u8IP3aBS33oQfi6aSVm_D11c4_Sk&usqp=CAU";
+            imageText = `<em>Scandium is used in the production of lightweight, high-strength gun bullets. Its strength-to-weight ratio makes it ideal for military applications, improving the efficiency and power of ammunition. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "Y") {
             imageUrl = "https://periodic-table.rsc.org/Content/Images/Elements/Yttrium-L.jpg?6.0.4.2";
+            imageText = `<em>Yttrium is used in satellite disks for its superconducting properties. It helps stabilize the performance of satellites by reducing the effects of electromagnetic interference and improving overall signal transmission. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "Lu") {
             imageUrl = "https://marketing.webassets.siemens-healthineers.com/1800000007261928/c44fd355fad6/v/58b7dc2f3c4a/siemens-healthineers_mi_biograph-vision_pet_ct_scanner_preview.png?nowebp=1";
             imageText = `<em>This element is used in positron emission tomography (PET) scanners for medical imaging. It also has applications in catalysts and alloys.<br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
@@ -97,7 +101,7 @@ class PeriodicTableInfoBox
             imageText = `<em>The image shows a beacon of hope for kidneys powered by actinium, used commonly in targeted alpha therapy for treating kidney cancer. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "Ti") {
             imageUrl = "https://7cad390533514c32acc8-75d23ce06fcfaf780446d85d50c33f7b.ssl.cf6.rackcdn.com/arm/uploads/2019/10/applications_of_titanium_in_dental_implants.jpg";
-
+            imageText = `<em>Titanium is commonly used in dental implant screws due to its strength, corrosion resistance, and biocompatibility with the human body. It’s ideal for implants because it fuses well with bone tissue, ensuring long-lasting results.<br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "Zr") {
             imageUrl = "https://www.zircon-association.org/assets/images/2019/600x400/gemstone-pixabay-diamond-123338_600x400.jpg";
             imageText = `<em>Zirconium is melted and reshaped into the shape of a jewel which is a good substitute used in jewelry for its brilliance, durability, and affordability. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
@@ -115,6 +119,7 @@ class PeriodicTableInfoBox
             imageText = `<em>The image shows a thoriated camera lens powered by thorium, used commonly to enhance optical clarity and reduce distortions in high-quality photography. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "V") {
             imageUrl = "https://www.americangeosciences.org/static/earth/mineral-resource-month-vanadium/2008-04-14_Chrome-Vanadium_Wrenches.jpg";
+            imageText = `<em>Vanadium is used in manufacturing wrenches and other tools because it enhances steel’s strength and resistance to wear and tear. The addition of vanadium makes tools more durable and able to withstand high levels of stress.<br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "Nb") {
             imageUrl = "https://7cad390533514c32acc8-75d23ce06fcfaf780446d85d50c33f7b.ssl.cf6.rackcdn.com/arm/uploads/2020/04/Uses_of_Niobium-2.jpg";
             imageText = `<em>Niobium is used to make aerospace parts because it can withstand extreme temperatures and pressures. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
@@ -129,6 +134,7 @@ class PeriodicTableInfoBox
             imageText = `<em>Praseodymium is an important component of high-power magnets, which transform electrical energy into mechanical vibrations that produce sound in audio equipment like headphones and loudspeakers. It is frequently used in conjunction with neodymium. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "Cr") {
             imageUrl = "https://study.com/cimages/multimages/16/d89a3253-78f3-4df0-b342-ebbac3830ed9_cake-fork-metal-cutlery-small-fork-39552.jpeg";
+            imageText = `<em>Chromium is widely used to coat utensils such as knives, forks, and spoons. Its resistance to corrosion, along with its shiny appearance, makes it ideal for providing a durable, attractive finish that lasts over time.<br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "Mo") {
             imageUrl = "https://7cad390533514c32acc8-75d23ce06fcfaf780446d85d50c33f7b.ssl.cf6.rackcdn.com/arm/uploads/2020/04/Molybdenum_Powder_Types_Applications.jpg";
             imageText = `<em>Molybdenum has a stable color formation and corrosion inhibition; that's why it's a suitable chemical to use in making paints or pigments. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
@@ -146,6 +152,7 @@ class PeriodicTableInfoBox
             imageText = `<em>The image shows a nuclear power plant powered by uranium, used commonly to generate electricity through nuclear fission. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "Mn") {
             imageUrl = "https://www.manganese.org/sites/default/files/styles/text_image_x2_/public/featured_images/ALUMINIUM.jpg.webp?itok=kHiIcn1E";
+            imageText = `<em>Manganese is used in the production of cans, as it increases the strength and durability of steel and aluminum. It also helps prevent corrosion, making it vital in ensuring that cans are resistant to wear and degradation.<br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "Tc") {
             imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuTO-ycZX9x3oKvGMMp-8wzc49Oohn-5E23RRIln7kD2Ow8wf5KdHnwBw19qTbjbmrVK4&usqp=CAU";
             imageText = `<em>Technetium is a widely used radioactive isotope in nuclear medicine, acting as a radiotracer for various medical imaging procedures, helping doctors visualize internal organs and tissues to diagnose and monitor conditions, which is called technetium-99m (tc-99m). <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
@@ -158,10 +165,9 @@ class PeriodicTableInfoBox
         } else if (element.symbol === "Pm") {
             imageUrl = "https://periodictable.com/Samples/038.6/s13.JPG";
             imageText = `<em>A radioactive element, it has limited practical uses due to its rarity and radioactivity. It's primarily used in specialized applications like luminous paint and nuclear batteries.<br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
-        } else if (element.symbol === "Np") {
-            imageUrl = "https://www.chemistrylearner.com/wp-content/uploads/2018/02/Neptunium-Element.jpg";
         } else if (element.symbol === "Fe") {
             imageUrl = "https://periodictable.com/Samples/026.59/s7s.JPG";
+            imageText = `<em>Iron is commonly used in the manufacturing of cast iron pans, which are known for their excellent heat retention and even heating. This makes them ideal for cooking, as they maintain stable temperatures, allowing for consistent cooking results.<br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "Ru") {
             imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwL4OqBkSFnhSZK7EMWLuuQlVaNxkjYJaQMwDVv_XaM6TGgH4DFlRkCISdi1EONfSPH7U&usqp=CAU";
             imageText = `<em>Ruthenium is often added to platinum or palladium alloys to create stronger and more scratch-resistant jewelry, which is a lovely material for making accessories; it can also make white gemstones appear brighter.<br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
@@ -179,6 +185,7 @@ class PeriodicTableInfoBox
             imageText = `<em>The image shows the Fat Man nuclear bomb powered by plutonium, used historically in World War II as the explosive core for nuclear detonation. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "Co") {
             imageUrl = "https://chemistrytalk.org/wp-content/uploads/2023/03/640px-Early_2000s_Rechargeable_Batteries.jpg";
+            imageText = `<em>Cobalt is an essential component in the production of rechargeable batteries, such as those used in electric vehicles and portable electronics. Its ability to enhance the energy density and lifespan of batteries makes it vital in modern battery technology.<br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "Rh") {
             imageUrl = "https://i00.eu/img/413/680x680/47nzz836/39495.jpg";
             imageText = `<em>Rhodium belongs to the platinum group and is utilized in jewelry plating because of its high reflectivity. It is also a rare and costly precious metal that is frequently used as a plating material in jewelry to give pieces, particularly white gold and silver, a bright, white, and reflecting surface that improves their durability and look.<br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
@@ -196,6 +203,7 @@ class PeriodicTableInfoBox
             imageText = `<em>The image shows a smoke detector powered by americium, used commonly to detect smoke particles and trigger fire alarms for safety. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "Ni") {
             imageUrl = "https://www.mecmining.com.au/wp-content/uploads/2016/10/nickel-004-1.jpg";
+            imageText = `<em>Nickel is frequently used in the minting of coins due to its durability, resistance to corrosion, and ability to withstand wear from handling. It also plays a significant role in making stainless steel and other alloys.<br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "Pd") {
             imageUrl = "https://img.medicalexpo.com/images_me/photo-mg/72900-9526751.webp";
             imageText = `<em>Palladium is an alloy that is compatible to be made into dental jewelry, where it's used to increase the luster of fillings and fight corrosion. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
@@ -213,6 +221,7 @@ class PeriodicTableInfoBox
             imageText = `<em>The image shows a portable mineral analyzer powered by curium, used commonly for identifying mineral compositions through X-ray fluorescence. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "Cu") {
             imageUrl = "https://www.netmeds.com/images/cms/wysiwyg/blog/2020/10/1603441464_Copper_big_3.jpg";
+            imageText = `<em>Copper is commonly used in the production of handi bowls and serving dishes because it conducts heat very efficiently, making it perfect for evenly heating food. It also has antimicrobial properties, making it a good choice for food-related applications.<br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "Ag") {
             imageUrl = "https://sarasotaantiquebuyers.com/wp-content/uploads/2017/11/We-buy-Antique-Silver.jpg";
             imageText = `<em>Silver is used in making tableware or utensils for a high value, which was very popular in the past. Up until now, some are still made from silver or other things made using silver. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
@@ -227,6 +236,7 @@ class PeriodicTableInfoBox
             imageText = `<em>This element is used as a green phosphor in color television tubes and fluorescent lamps. It also has applications in solid-state devices and magneto-optical recording. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "Zn") {
             imageUrl = "https://1.bp.blogspot.com/-D067hJvnJcE/XW5a8yqv_LI/AAAAAAAAABU/gNRox4yNbg0vIgH6PIKyAFZFRaxpPeWkQCLcBGAs/s1600/zinc-manufacturers-in-India.jpg";
+            imageText = `<em>Zinc is an important element in batteries, metal bars, and some medicines. It is used in zinc-carbon and zinc-air batteries and is also a key ingredient in zinc-based treatments for various health conditions, such as colds and immune support.<br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "Cd") {
             imageUrl = "https://www.globalhealingcenter.com/natural-health/wp-content/uploads/2013/05/cadmium-batteries.jpg";
             imageText = `<em>Nickel-cadmium (Ni-Cd) rechargeable batteries, which are found in a variety of gadgets such as portable computers, cell phones, and cordless power tools, contain cadmium.<br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
@@ -247,6 +257,7 @@ class PeriodicTableInfoBox
             imageText = `<em>Aluminum is used as a conductor material because it is lightweight, has good electrical conductivity, and is more affordable than copper. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "Ga") {
             imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBXzgxUIP4ZqmFA_I5F4BYH8LxnZ83MMEJ1OprjNq404mFLy2qfPXjtzBynTLw6Apk&usqp=CAU";
+            imageText = `<em>Gallium is used in thermometers because it remains in liquid form at a wide range of temperatures. Its low melting point makes it an ideal material for measuring temperatures in devices that require precision.<br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "In") {
             imageUrl = "https://images.squarespace-cdn.com/content/v1/5fc769a68b9e860b7b20d9a1/97bd6fd9-60a9-481a-84c2-8a893bda7452/unsplash-image-oCfkSnqZ0SI.jpg";
             imageText = `<em>The majority of indium is used to create indium tin oxide, which is found in solar panels, touchscreens, and flat-screen TVs.  LCD screens use 70% of the lithium produced worldwide.<br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
@@ -264,6 +275,7 @@ class PeriodicTableInfoBox
             imageText = `<em>Silicon is used in computer chips because it is a semiconductor, meaning it can control electrical currents. It is also abundant, durable, and can be precisely modified to create tiny circuits that process data. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "Ge") {
             imageUrl = "https://cdn.prod.website-files.com/60a3c1fc44c5715c395770e7/63ec538e059ecdbc89b2c7d3_pexels-rfstudio-3825581.jpg";
+            imageText = `<em>Germanium is used in heat sinks and motherboards due to its excellent semiconductor properties. It helps manage heat in electronic devices and allows for faster processing speeds in computer systems. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "Sn") {
             imageUrl = "https://study.com/cimages/videopreview/videopreview-full/yiu1pc0sap.jpg";
             imageText = `<em>Tin has a variety of uses, such as reducing agents in glass and ceramics, solders for connecting pipes and electrical circuits, alloys like bronze, and protective coatings for steel containers (like tin cans). <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
@@ -286,6 +298,7 @@ class PeriodicTableInfoBox
             imageText = `<em>Phosphorus is used in matches because it helps ignite the flame. This creates enough heat making phosphorus essential for starting fires safely and easily. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "As") {
             imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNEGar3X05QUqXvKYVcijM21ZnXIS5qVZMkJPZwimG-OPEYSqwRAq11zYTYSsvcvZF6l8&usqp=CAU";
+            imageText = `<em>Arsenic is used in the production of gun bullets and other military-grade weapons due to its hardness and density. Historically, it has also been used as a poison, although its use in this regard has decreased over time. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "Sb") {
             imageUrl = "https://image.made-in-china.com/226f3j00ZLHWvUmYYQkz/SZSC-Series-Tin-Zinc-Antimony-Copper-Alloy-Wire-for-Film-Capacitor-Patented-Product-Sample-Customization.webp";
             imageText = `<em>Antimony hardens metals. It's used in alloys like battery lead and bearings, making them stronger and more durable. It also helps create detailed castings.<br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
@@ -303,11 +316,13 @@ class PeriodicTableInfoBox
             imageText = `<em>The image displays a scientist operating a particle accelerator, a crucial tool in the discovery of mendelevium. This synthetic element was first produced in 1955 by bombarding einsteinium with alpha particles.<br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "O") {
             imageUrl = "https://engiomed.ae/wp-content/uploads/2022/09/oxygen-cylinder.jpg";
+            imageText = `<em>Oxygen is used and stored in oxygen tanks because it is essential for breathing and medical treatments. These tanks provide a concentrated supply of oxygen for patients with respiratory conditions, people in high-altitude environments, and divers underwater.<br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "S") {
             imageUrl = "https://medsgo.ph/images/detailed/26/Unilab-United-Home-Sulfent-_Sulfur-Ointment-for-Pimples-Scabies-30g-Tube_-3[1].jpg";
             imageText = `<em>Sulfur is used in ointments because it helps treat skin conditions like acne, dandruff, and scabies. It has antibacterial and antifungal properties that kill germs and reduce inflammation. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "Se") {
             imageUrl = "https://www.alzdiscovery.org/uploads/cognitive_vitality/iStock-Selenium_rating.jpg";
+            imageText = `<em>Selenium is found in Brazil nuts and is a crucial antioxidant for the body. It helps protect cells from damage and is important for maintaining a healthy immune system and thyroid function. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "Te") {
             imageUrl = "https://media.sciencephoto.com/image/c0132774/800wm";
             imageText = `<em>Tellurium suboxide is a crucial part of the active data-recording layer of rewritable Blu-ray discs, CD-RW, and DVD-RW. It is also utilized in Intel's new phase-change memory processors.<br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
@@ -325,13 +340,16 @@ class PeriodicTableInfoBox
             imageText = `<em>The image displays scientists working with an advanced particle detection system, an essential tool in the discovery of nobelium.<br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "He") {
             imageUrl = "https://www.gasworld.com/cdn-cgi/image/width=1200,height=900,fit=contain,quality=75,metadata=none,format=auto,gravity=auto/https://www.gasworld.com/wp-content/files/gwml/mrimachine_628365.jpg";
+            imageText = `<em>Helium is used in MRI machines to cool the superconducting magnets to extremely low temperatures allowing them to generate a strong, stable magnetic field necessary for high-quality imaging. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "Ne") {
             imageUrl = "https://www.repairfaq.org/sam/jkhene/Laser_2_Front_Big.JPG";
+            imageText = `<em>Neon is used in lasers because it helps create a bright and steady red light. When electricity passes through the neon gas, it glows and amplifies the light. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "Ar") {
             imageUrl = "https://img-seychelles.com/wp-content/uploads/2023/05/Argon-Gas-for-sale-in-Seychelles.jpg";
             imageText = `<em>Argon is used in light bulbs because it prevents the filament from burning out quickly. Since argon is a non-reactive gas, it protects the hot filament from reacting with oxygen, which would cause it to break down.<br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "Kr") {
             imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFibQzuBBmmCFgGHYqbUjPw1ibPXvqcOFTCtZjRYzmDxjunesGMbK6JYGhbLT2kxEWtdc&usqp=CAU";
+            imageText = `<em>Krypton is used in stage lighting machines to produce bright, white light. Its high efficiency and ability to create a striking glow make it ideal for theatrical lighting and other performance settings where bright illumination is needed. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "Xe") {
             imageUrl = "https://www.powerbulbs.com/uploads/images/blog_images/Xenon-BMW-Blog-Image-1.jpg";
             imageText = `<em>The noble gas xenon is employed in a variety of fields, such as space exploration and propulsion, medical imaging (as a tracer), lighting (such as headlights and flash lamps), and general anesthesia. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
@@ -343,11 +361,13 @@ class PeriodicTableInfoBox
             imageText = `<em> The heaviest known element, named after physicist Yuri Oganessian. Though classified as a noble gas, it may behave differently from others in its group.<br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "F") {
             imageUrl = "https://periodictable.com/Samples/009.1/s13.JPG";
+            imageText = `<em>Fluorine is used in Teflon tapes because it creates a non-stick, heat-resistant, and chemically stable material makes it resistant to water, oils, and most chemicals. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "Cl") {
             imageUrl = "https://araxchemi.com/my_uploads/2019/05/Chlorine-with-pool-768x512.webp";
             imageText = `<em>Chlorine is used in swimming pools because it kills bacteria, viruses, and algae, keeping the water clean and safe. It disinfects by breaking down harmful germs and preventing the spread of infections. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "Br") {
             imageUrl = "https://bromine123.weebly.com/uploads/4/6/9/4/46940515/379692.jpg?321";
+            imageText = `<em>Bromine is widely used in the production of insecticides. It effectively controls pests and insects, making it valuable for agricultural and home use in managing pests that damage crops or create health hazards. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "I") {
             imageUrl = "https://media.post.rvohealth.io/wp-content/uploads/2019/03/Salt_Spoons_732x549-thumbnail.jpg";
             imageText = `<em>The heaviest nonradioactive halogen is iodine, a nonmetallic chemical element.  It is a crystalline solid that is almost black and has the ability to change into a noxious, deep violet vapor.<br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
