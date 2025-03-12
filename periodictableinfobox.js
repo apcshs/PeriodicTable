@@ -377,26 +377,44 @@ class PeriodicTableInfoBox
         } else if (element.symbol === "Ts") {
             imageUrl = "https://cdn1.byjus.com/wp-content/uploads/2018/08/Tennessine-2.jpg";
             imageText = `<em> A halogen-like element named after Tennessee, USA. It remains largely unstudied due to its extreme instability.<br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
-        }
-
-        const infoImage = document.getElementById("infoImage");
-        if (imageUrl) {
-            infoImage.src = imageUrl;
-            infoImage.alt = element.name;
-            infoImage.style.display = "block"; 
-        } else {
-            infoImage.style.display = "none"; 
-        }
+        } else if (element.symbol === "Ba") {
+            imageUrl = "https://d1ymz67w5raq8g.cloudfront.net/Pictures/415x277/9/2/3/108923_eic0514_elements_fig1_300tb.jpg";
+            imageText = `<em>The image shows an X-ray procedure. Barium is used as a contrast agent to highlight the digestive tract for clearer imaging.<br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
+        } else if (element.symbol === "Fr") {
+            imageUrl = "";
+            imageText = `<em>The most unstable of all naturally occurring elements, francium exists only in minuscule amounts and decays within seconds, making it impossible to collect or use in any practical way.<br><br></em>`;
+        } else if (element.symbol === "Pa") {
+            imageUrl = "";
+            imageText = `<em>Found in uranium ores, protactinium is extremely rare and highly radioactive. Its complex extraction process and toxicity prevent it from being used outside of nuclear and geological research.<br><br></em>`;
+        } else if (element.symbol === "Np") {
+            imageUrl = "";
+            imageText = `<em>A byproduct of nuclear reactors, neptunium has limited applications because of its radioactivity and potential for nuclear proliferation. While it could theoretically be used in nuclear batteries, safety concerns restrict its practical use. <br><br></em>`;
+        } else if (element.symbol === "Bk") {
+            imageUrl = "";
+            imageText = `<em>A synthetic element produced in nuclear reactors, berkelium is mainly used to create heavier elements like californium. Its radioactivity and difficulty in production make it impractical for everyday applications.<br><br></em>`;
+        } else if (element.symbol === "Es") {
+            imageUrl = "";
+                imageText = `<em>An artificial element created in minute amounts during nuclear explosions or in particle accelerators. It has no known practical use due to its rapid decay and extreme radioactivity, serving only as a subject for advanced nuclear research.<br><br></em>`;
+            }
+            
+            const infoImage = document.getElementById("infoImage");
+            if (imageUrl) {
+                infoImage.src = imageUrl;
+                infoImage.alt = element.name;
+                infoImage.style.display = "block"; 
+            } else {
+                infoImage.style.display = "none"; 
+            }
     
-        const infoImageText = document.getElementById("infoImageText");
-        if (imageText) {
-            infoImageText.innerHTML = imageText;
-            infoImageText.style.display = "block"; 
-        } else {
-            infoImageText.style.display = "none"; 
-        }
+            const infoImageText = document.getElementById("infoImageText");
+            if (imageText) {
+                infoImageText.innerHTML = imageText;
+                infoImageText.style.display = "block"; 
+            } else {
+                infoImageText.style.display = "none"; 
+            }
     
-        document.getElementById(this._infoboxbackgroundid).style.visibility = "visible";
-        document.getElementById(this._infoboxid).style.visibility = "visible";
+            document.getElementById(this._infoboxbackgroundid).style.visibility = "visible";
+            document.getElementById(this._infoboxid).style.visibility = "visible";
+        }
     }
-}
