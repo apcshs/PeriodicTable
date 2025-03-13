@@ -199,7 +199,7 @@ class PeriodicTableInfoBox
             imageUrl = "https://periodictable.com/Samples/063.5/s13.JPG";
             imageText = `<em>It's used as a red or blue phosphor in television screens and fluorescent lamps. It also has applications in control rods for nuclear reactors.<br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "Am") {
-            imageUrl = "http://large.stanford.edu/courses/2011/ph241/eason1/images/f1big.jpg";
+            imageUrl = "https://study.com/cimages/multimages/16/webp.net-resizeimage_864297105507316655674.jpg";
             imageText = `<em>The image shows a smoke detector powered by americium, used commonly to detect smoke particles and trigger fire alarms for safety. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "Ni") {
             imageUrl = "https://www.mecmining.com.au/wp-content/uploads/2016/10/nickel-004-1.jpg";
