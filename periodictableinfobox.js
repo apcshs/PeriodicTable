@@ -12,7 +12,7 @@ class PeriodicTableInfoBox
             {
                 this.Hide();
             }
-        }
+        };
 
         document.getElementById("btnCloseInfoBox").onclick = () => this.Hide();
     }
@@ -394,27 +394,35 @@ class PeriodicTableInfoBox
             imageText = `<em>A synthetic element produced in nuclear reactors, berkelium is mainly used to create heavier elements like californium. Its radioactivity and difficulty in production make it impractical for everyday applications.<br><br></em>`;
         } else if (element.symbol === "Es") {
             imageUrl = "";
-                imageText = `<em>An artificial element created in minute amounts during nuclear explosions or in particle accelerators. It has no known practical use due to its rapid decay and extreme radioactivity, serving only as a subject for advanced nuclear research.<br><br></em>`;
-            }
-            
-            const infoImage = document.getElementById("infoImage");
-            if (imageUrl) {
-                infoImage.src = imageUrl;
-                infoImage.alt = element.name;
-                infoImage.style.display = "block"; 
-            } else {
-                infoImage.style.display = "none"; 
-            }
-    
-            const infoImageText = document.getElementById("infoImageText");
-            if (imageText) {
-                infoImageText.innerHTML = imageText;
-                infoImageText.style.display = "block"; 
-            } else {
-                infoImageText.style.display = "none"; 
-            }
-    
-            document.getElementById(this._infoboxbackgroundid).style.visibility = "visible";
-            document.getElementById(this._infoboxid).style.visibility = "visible";
+            imageText = `<em>An artificial element created in minute amounts during nuclear explosions or in particle accelerators. It has no known practical use due to its rapid decay and extreme radioactivity, serving only as a subject for advanced nuclear research.<br><br></em>`;
         }
+        
+        const infoImage = document.getElementById("infoImage");
+        infoImage.setAttribute("loading", "lazy");
+        infoImage.dataset.src = imageUrl;
+        infoImage.src = "";
+        infoImage.alt = element.name;
+        infoImage.style.display = "block"; 
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    infoImage.src = infoImage.dataset.src;
+                    observer.unobserve(infoImage); 
+                }
+            });
+        });
+        observer.observe(infoImage);
+
+        const infoImageText = document.getElementById("infoImageText");
+        if (imageText) {
+            infoImageText.innerHTML = imageText;
+            infoImageText.style.display = "block"; 
+        } else {
+            infoImageText.style.display = "none"; 
+        }
+
+        document.getElementById(this._infoboxbackgroundid).style.visibility = "visible";
+        document.getElementById(this._infoboxid).style.visibility = "visible";
     }
+}
