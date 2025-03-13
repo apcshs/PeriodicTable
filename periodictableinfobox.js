@@ -118,7 +118,7 @@ class PeriodicTableInfoBox
             imageUrl = "https://www.orau.org/health-physics-museum/img/museum/consumer-products/thorium/pentax-camera.jpg";
             imageText = `<em>The image shows a thoriated camera lens powered by thorium, used commonly to enhance optical clarity and reduce distortions in high-quality photography. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "V") {
-            imageUrl = "https://www.americangeosciences.org/static/earth/mineral-resource-month-vanadium/2008-04-14_Chrome-Vanadium_Wrenches.jpg";
+            imageUrl = "https://www.americangeosciences.org/static/earth/mineral-resource-month-vanadium/2008-04-14_18-57-46_Switzerland_-_Wil_crop.jpg";
             imageText = `<em>Vanadium is used in manufacturing wrenches and other tools because it enhances steel’s strength and resistance to wear and tear. The addition of vanadium makes tools more durable and able to withstand high levels of stress.<br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "Nb") {
             imageUrl = "https://7cad390533514c32acc8-75d23ce06fcfaf780446d85d50c33f7b.ssl.cf6.rackcdn.com/arm/uploads/2020/04/Uses_of_Niobium-2.jpg";
@@ -396,23 +396,12 @@ class PeriodicTableInfoBox
             imageUrl = "";
             imageText = `<em>An artificial element created in minute amounts during nuclear explosions or in particle accelerators. It has no known practical use due to its rapid decay and extreme radioactivity, serving only as a subject for advanced nuclear research.<br><br></em>`;
         }
-        
+
         const infoImage = document.getElementById("infoImage");
         infoImage.setAttribute("loading", "lazy");
-        infoImage.dataset.src = imageUrl;
-        infoImage.src = "";
+        infoImage.src = imageUrl; 
         infoImage.alt = element.name;
-        infoImage.style.display = "block"; 
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    infoImage.src = infoImage.dataset.src;
-                    observer.unobserve(infoImage); 
-                }
-            });
-        });
-        observer.observe(infoImage);
+        infoImage.style.display = imageUrl ? "block" : "none"; 
 
         const infoImageText = document.getElementById("infoImageText");
         if (imageText) {
