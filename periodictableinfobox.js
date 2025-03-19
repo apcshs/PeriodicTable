@@ -39,6 +39,7 @@ class PeriodicTableInfoBox
         document.getElementById("infoBlock").innerHTML = element.block;
         document.getElementById("infoElectronConfiguration").innerHTML = element.electronConfiguration;
         document.getElementById("infoValenceElectrons").innerHTML = element.valenceElectrons;
+        
 
         let imageUrl = "";
         let imageText = "";
@@ -293,6 +294,7 @@ class PeriodicTableInfoBox
             imageText = `<em>The image displays a massive mushroom cloud resulting from a nuclear explosion, which is linked to the discovery of the element fermium.<br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
         } else if (element.symbol === "N") {
             imageUrl = "https://etimg.etb2bimg.com/photo/70126789.cms";
+            imageText = `<em>Nitrogen is used in car tires because it is more stable than regular air. It reduces the chances of pressure changes due to temperature fluctuations, helping maintain proper tire inflation for longer. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a</em>`;
         } else if (element.symbol === "P") {
             imageUrl = "https://cdn.mos.cms.futurecdn.net/kUec7ZhbuZkR4DQAhvPB57-500-80.jpg.webp";
             imageText = `<em>Phosphorus is used in matches because it helps ignite the flame. This creates enough heat making phosphorus essential for starting fires safely and easily. <br><br>URL:&nbsp;<a href="${imageUrl}" target="_blank" style="color: black;">${imageUrl}</a></em>`;
@@ -415,3 +417,10 @@ class PeriodicTableInfoBox
         document.getElementById(this._infoboxid).style.visibility = "visible";
     }
 }
+
+function shortenURL(url, text = "Click here") {
+    return `<a href="${url}" target="_blank">${text}</a>`;
+}
+
+// Example Usage:
+document.getElementById("infoImageText").innerHTML = shortenURL(imageUrl, "Learn more about this element");
