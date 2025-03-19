@@ -448,3 +448,51 @@ table {
         width:300px !important;
     }
 }
+
+#infobox {
+    max-width: 90vw; 
+    max-height: 80vh; 
+    overflow-y: auto; 
+    overflow-x: hidden; 
+    padding: 20px;
+    text-align: left; 
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.modal-body {
+    word-wrap: break-word; 
+    white-space: normal; 
+    padding: 10px;
+    font-size: 16px; 
+    line-height: 1.5; 
+}
+
+
+#infobox table {
+    width: 100%; 
+    table-layout: auto; 
+    border-collapse: collapse;
+}
+
+#infobox table td, #infobox table th {
+    padding: 5px; 
+    text-align: left;
+    word-wrap: break-word;
+}
+
+#infobox img {
+    max-width: 100%; 
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+#infobox .close {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
