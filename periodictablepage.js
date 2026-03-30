@@ -5,39 +5,49 @@ window.onload = function()
     SetEventHandlers();
 
     APP.periodictable = new PeriodicTable();
-
     APP.display = new PeriodicTableDisplay(APP.periodictable, "periodictable", "infoboxbackground", "infobox");
 
-    APP.filterinputs =
-	{
-		name: document.getElementById("namefilter"),
-		atomicnumber: document.getElementById("atomicnumberfilter"),
-		symbol: document.getElementById("symbolfilter"),
-		category: document.getElementById("categoryfilter"),
-		group: document.getElementById("groupfilter"),
-		period: document.getElementById("periodfilter"),
-		block: document.getElementById("blockfilter")
-	};
-}
+    APP.filterinputs = {
+        name:         document.getElementById("namefilter"),
+        atomicnumber: document.getElementById("atomicnumberfilter"),
+        symbol:       document.getElementById("symbolfilter"),
+        category:     document.getElementById("categoryfilter"),
+        group:        document.getElementById("groupfilter"),
+        period:       document.getElementById("periodfilter"),
+        block:        document.getElementById("blockfilter")
+    };
+
+    const globalSearch = document.getElementById("globalsearch");
+    globalSearch.addEventListener("input", () => {
+        const val = globalSearch.value.trim();
+        APP.filterinputs.name.value = val;
+        APP.periodictable.ApplyFilter({
+            name:         val,
+            atomicnumber: "",
+            symbol:       val,   
+            category:     "",
+            group:        "",
+            period:       "",
+            block:        ""
+        });
+    });
+};
 
 
 function SetEventHandlers()
 {
-    document.getElementById("btnApplyFilter").onclick = ApplyFilter;
-    document.getElementById("btnClearFilter").onclick = ClearFilter;
-
-    document.getElementById("colorblock").onclick = ColorByBlock;
-    document.getElementById("colorcategory").onclick = ColorByCategory;
+    document.getElementById("btnApplyFilter").onclick  = ApplyFilter;
+    document.getElementById("btnClearFilter").onclick  = ClearFilter;
+    document.getElementById("colorblock").onclick      = ColorByBlock;
+    document.getElementById("colorcategory").onclick   = ColorByCategory;
 }
 
 
 function ColorByBlock()
 {
     this.blur();
-
     document.getElementById("categorykey").style.display = "none";
-    document.getElementById("blockkey").style.display = "inline";
-
+    document.getElementById("blockkey").style.display    = "flex";
     APP.display.ColorByBlock();
 }
 
@@ -45,40 +55,39 @@ function ColorByBlock()
 function ColorByCategory()
 {
     this.blur();
-
-    document.getElementById("blockkey").style.display = "none";
-    document.getElementById("categorykey").style.display = "inline";
-
+    document.getElementById("blockkey").style.display    = "none";
+    document.getElementById("categorykey").style.display = "flex";
     APP.display.ColorByCategory();
 }
 
 
 function ApplyFilter()
 {
-    filtercriteria =
-    {
-        name: APP.filterinputs.name.value,
+    const criteria = {
+        name:         APP.filterinputs.name.value,
         atomicnumber: APP.filterinputs.atomicnumber.value,
-        symbol: APP.filterinputs.symbol.value,
-        category: APP.filterinputs.category.value,
-        group: APP.filterinputs.group.value,
-        period: APP.filterinputs.period.value,
-        block: APP.filterinputs.block.value
+        symbol:       APP.filterinputs.symbol.value,
+        category:     APP.filterinputs.category.value,
+        group:        APP.filterinputs.group.value,
+        period:       APP.filterinputs.period.value,
+        block:        APP.filterinputs.block.value
     };
-
-    APP.periodictable.ApplyFilter(filtercriteria)
+    APP.periodictable.ApplyFilter(criteria);
 }
 
 
 function ClearFilter()
 {
-    APP.filterinputs.name.value = "";
+    APP.filterinputs.name.value         = "";
     APP.filterinputs.atomicnumber.value = "";
-    APP.filterinputs.symbol.value = "";
-    APP.filterinputs.category.value = "";
-    APP.filterinputs.group.value = "";
-    APP.filterinputs.period.value = "";
-    APP.filterinputs.block.value = "";
+    APP.filterinputs.symbol.value       = "";
+    APP.filterinputs.category.value     = "";
+    APP.filterinputs.group.value        = "";
+    APP.filterinputs.period.value       = "";
+    APP.filterinputs.block.value        = "";
+
+    const globalSearch = document.getElementById("globalsearch");
+    if (globalSearch) globalSearch.value = "";
 
     APP.periodictable.ClearFilter();
 }
