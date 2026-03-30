@@ -1,191 +1,144 @@
 class PeriodicTableDisplay
 {
-	constructor(periodictable, tableid, infoboxbackgroundid, infoboxid)
-	{
-		this._periodictable = periodictable;
+    constructor(periodictable, tableid, infoboxbackgroundid, infoboxid)
+    {
+        this._periodictable = periodictable;
         this._tableid = tableid;
+        this._periodictable.AddFilterChangedEventHandler(this._onFilterChanged.bind(this));
+        this._infobox = new PeriodicTableInfoBox(periodictable, infoboxbackgroundid, infoboxid);
 
-		this._periodictable.AddFilterChangedEventHandler(this._onFilterChanged.bind(this));
+        this._categoryClassMappings = {
+            "Alkali metal": "alkalimetal",
+            "Alkaline earth metal": "alkalineearthmetal",
+            "Lanthanide": "lanthanide",
+            "Actinide": "actinide",
+            "Transition metal": "transitionmetal",
+            "Post-transition metal": "posttransitionmetal",
+            "Metalloid": "metalloid",
+            "Reactive nonmetal": "reactivenonmetal",
+            "Noble gas": "noblegas",
+            "Unknown": "unknown"
+        };
 
-		this._infobox = new PeriodicTableInfoBox(periodictable, infoboxbackgroundid, infoboxid);
+        this._blockClassMappings = {
+            "s": "sblock",
+            "d": "dblock",
+            "f": "fblock",
+            "p": "pblock"
+        };
 
-		this._categoryClassMappings =
-		{
-			"Alkali metal": "alkalimetal",
-			"Alkaline earth metal": "alkalineearthmetal",
-			"Lanthanide": "lanthanide",
-			"Actinide": "actinide",
-			"Transition metal": "transitionmetal",
-			"Post-transition metal": "posttransitionmetal",
-			"Metalloid": "metalloid",
-			"Reactive nonmetal": "reactivenonmetal",
-			"Noble gas": "noblegas",
-			"Unknown": "unknown"
-		}
+        this._groupNames = {
+            1: "Alkali metals",
+            2: "Alkaline earth metals",
+            15: "Pnictogens",
+            16: "Chalcogens",
+            17: "Halogens",
+            18: "Noble gases"
+        };
 
-		this._blockClassMappings =
-		{
-			"s": "sblock",
-			"d": "dblock",
-			"f": "fblock",
-			"p": "pblock"
-		}
+        this._createCells();
+        this._createColumnHeadings();
+        this._createRowHeadings();
+        this._populate();
 
-		this._groupNames =
-		{
-			1: "Alkali metals",
-			2: "Alkaline earth metals ",
-			15: "Pnictogens",
-			16: "Chalcogens",
-			17: "Halo­gens",
-			18: "Noble gases"
-		};
-
-		this._createCells();
-		this._createColumnHeadings();
-		this._createRowHeadings();
-		this._populate();
-
-		document.getElementById(this._tableid).addEventListener('click', event =>
-		{
-			let target = event.target;
-
-			if(target.parentElement.classList.contains("elementcell"))
-			{
-				target = event.target.parentElement;
-			}
-
-			if(target.classList.contains("elementcell"))
-			{
-				console.log("Element clicked:", target.dataset.atomicnumber);
-				this._infobox.Show(target.dataset.atomicnumber);
-			}
-		});
+        document.getElementById(this._tableid).addEventListener('click', event => {
+            let target = event.target;
+            while (target && target !== document.getElementById(this._tableid)) {
+                if (target.classList.contains("elementcell")) {
+                    this._infobox.Show(target.dataset.atomicnumber);
+                    return;
+                }
+                target = target.parentElement;
+            }
+        });
     }
 
-	_onFilterChanged(changed)
-	{
-		let currentcell = null;
+    _onFilterChanged(changed)
+    {
+        for (let element of changed) {
+            const cell = document.querySelector(`[data-row='${element.tablerow18col}'][data-column='${element.tablecolumn18col}']`);
+            if (cell) cell.classList.toggle("elementcellfaded");
+        }
+    }
 
-		for(let element of changed)
-		{
-			currentcell = document.querySelector(`[data-row='${element.tablerow18col}'][data-column='${element.tablecolumn18col}']`);
-
-			currentcell.classList.toggle("elementcellfaded");
-		}
-	}
-
-	_createCells()
-	{
-		let table = document.getElementById(this._tableid);
-
-		let currentcell;
-
-		for(let row = 0; row < this._periodictable.rowcount; row++)
-		{
-            let newrow = document.createElement('tr');
-			table.appendChild(newrow);
-
-			for(let column = 0; column < this._periodictable.columncount; column++)
-			{
-                let cell = document.createElement('td');
-
-				cell.setAttribute("data-row", row);
-				cell.setAttribute("data-column", column);
-
+    _createCells()
+    {
+        const table = document.getElementById(this._tableid);
+        for (let row = 0; row < this._periodictable.rowcount; row++) {
+            const newrow = document.createElement('tr');
+            table.appendChild(newrow);
+            for (let column = 0; column < this._periodictable.columncount; column++) {
+                const cell = document.createElement('td');
+                cell.setAttribute("data-row", row);
+                cell.setAttribute("data-column", column);
+                cell.classList.add("cell");
                 newrow.appendChild(cell);
+            }
+        }
+    }
 
-				currentcell = document.querySelector(`[data-row='${row}'][data-column='${column}']`);
-				currentcell.classList.add("cell");
-			}
-		}
-	}
+    _createColumnHeadings()
+    {
+        for (let column = 1; column <= 18; column++) {
+            const cell = document.querySelector(`[data-row='0'][data-column='${column}']`);
+            cell.innerHTML = `${column}<br /><span class="groupname">${this._groupNames[column] || ""}</span>`;
+            cell.classList.add("headingcell");
+        }
+    }
 
-	_createColumnHeadings()
-	{
-		for(let column = 1; column <= 18; column++)
-		{
-			let currentcell = document.querySelector(`[data-row='0'][data-column='${column}']`);
-			currentcell.innerHTML = `${column}<br /><span class="groupname">${this._groupNames[column] || "&nbsp;"}</span>`;
-			currentcell.classList.add("headingcell");
-		}
-	}
-
-	_createRowHeadings()
-	{
-		for(let row = 1; row <= 7; row++)
-		{
-			let currentcell = document.querySelector(`[data-row='${row}'][data-column='0']`);
-			currentcell.innerHTML = row;
-			currentcell.classList.add("headingcell");
-		}
-	}
+    _createRowHeadings()
+    {
+        for (let row = 1; row <= 7; row++) {
+            const cell = document.querySelector(`[data-row='${row}'][data-column='0']`);
+            cell.innerHTML = row;
+            cell.classList.add("headingcell");
+        }
+    }
 
     _populate()
     {
-		let currentcell = null;
-		let tooltip = "";
+        for (let element of this._periodictable.data) {
+            const cell = document.querySelector(`[data-row='${element.tablerow18col}'][data-column='${element.tablecolumn18col}']`);
+            cell.setAttribute('data-atomicnumber', element.atomicnumber);
 
-		for(let element of this._periodictable.data)
-		{
-			currentcell = document.querySelector(`[data-row='${element.tablerow18col}'][data-column='${element.tablecolumn18col}']`);
+            cell.innerHTML = `
+                <span class="el-number">${element.atomicnumber}</span>
+                <span class="el-symbol">${element.symbol}</span>
+                <span class="el-name">${element.name}</span>
+                <span class="el-weight">${element.atomicweight}</span>`;
 
-			currentcell.setAttribute('data-atomicnumber', element.atomicnumber);
+            const tooltip = [
+                `Name: ${element.name}`,
+                `Atomic number: ${element.atomicnumber}`,
+                `Symbol: ${element.symbol}`,
+                `Category: ${element.category}`,
+                `Atomic weight: ${element.atomicweight}`,
+                `State: ${element.stateofmatter}`,
+                `Group: ${element.group}  Period: ${element.period}  Block: ${element.block}`
+            ].join('\n');
 
-			currentcell.innerHTML = `
-				${element.name}<br />
-				${element.atomicnumber}<br />
-				<span class="chemicalsymbol">${element.symbol}</span><br />
-				${element.atomicweight}`;
+            cell.setAttribute("title", tooltip);
+            cell.classList.add("elementcell");
+        }
 
-			tooltip = `Name: ${element.name}
-					Atomic number: ${element.atomicnumber}
-					Chemical symbol: ${element.symbol}
-					Category: ${element.category}
-					Atomic weight - conventional: ${element.atomicweight}
-					Atomic weight - standard: ${element.atomicweightfull}
-					Occurrence: ${element.occurrence}
-					State of matter: ${element.stateofmatter}
-					Group: ${element.group}
-					Period: ${element.period}
-					Block: ${element.block}`;
-
-			currentcell.setAttribute("title", tooltip.replace(/\t/g, ''));
-
-			currentcell.classList.add("elementcell");
-		}
-
-		// this.ColorByCategory();
-		this.ColorByBlock();
+        this.ColorByBlock();
     }
 
-	ColorByCategory()
-	{
-        for(let element of this._periodictable.data)
-		{
-			let currentcell = document.querySelector(`[data-row='${element.tablerow18col}'][data-column='${element.tablecolumn18col}']`);
+    ColorByCategory()
+    {
+        for (let element of this._periodictable.data) {
+            const cell = document.querySelector(`[data-row='${element.tablerow18col}'][data-column='${element.tablecolumn18col}']`);
+            Object.values(this._blockClassMappings).forEach(c => cell.classList.remove(c));
+            cell.classList.add(this._categoryClassMappings[element.category]);
+        }
+    }
 
-			for(let v of Object.values(this._blockClassMappings))
-			{
-				currentcell.classList.remove(v);
-			}
-
-			currentcell.classList.add(this._categoryClassMappings[element.category]);
-		}
-	}
-
-	ColorByBlock()
-	{
-        for(let element of this._periodictable.data)
-		{
-			let currentcell = document.querySelector(`[data-row='${element.tablerow18col}'][data-column='${element.tablecolumn18col}']`);
-
-			for(let v of Object.values(this._categoryClassMappings))
-			{
-				currentcell.classList.remove(v);
-			}
-
-			currentcell.classList.add(this._blockClassMappings[element.block]);
-		}
-	}
+    ColorByBlock()
+    {
+        for (let element of this._periodictable.data) {
+            const cell = document.querySelector(`[data-row='${element.tablerow18col}'][data-column='${element.tablecolumn18col}']`);
+            Object.values(this._categoryClassMappings).forEach(c => cell.classList.remove(c));
+            cell.classList.add(this._blockClassMappings[element.block]);
+        }
+    }
 }
