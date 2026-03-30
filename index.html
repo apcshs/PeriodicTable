@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
     <title>Chemistry Hub: Periodic Table</title>
     <meta charset="utf-8" />
@@ -9,376 +7,241 @@
     <link href="projects.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-
 <body>
+<div class="maindiv">
 
-    <div class="maindiv">
+    <!-- TOP BAR -->
+    <div class="topbar">
+        <span class="topbar-title">&#9883; CHEMISTRY HUB</span>
+        <div class="search-wrap">
+            <i class="fas fa-search"></i>
+            <input type="text" id="globalsearch" placeholder="Quick search element..." autocomplete="off" />
+        </div>
+        <div class="topbar-right">
+            <button class="toggle-btn" id="leftToggleButton" onclick="toggleLeftMenu()">
+                <i class="fas fa-sliders-h"></i> Filters
+            </button>
+            <button class="toggle-btn" id="rightToggleButton" onclick="toggleRightMenu()">
+                <i class="fas fa-palette"></i> Legend
+            </button>
+            <button class="linkpanel" onclick="window.open('https://chemistryhub.carrd.co','_blank')">
+                <i class="fas fa-home"></i> Home
+            </button>
+        </div>
+    </div>
 
-        <button id="leftToggleButton" class="toggle-btn" onclick="toggleLeftMenu()">&lt;</button>
-        <button id="rightToggleButton" class="toggle-btn" onclick="toggleRightMenu()">&gt;</button>
-        <button class="linkpanel" onclick="window.open('https://chemistryhub.carrd.co', '_blank')">
-            <i class="fas fa-home"></i> Home
-        </button>
+    <!-- BODY ROW -->
+    <div class="bodyrow">
 
-        <div class="roundcorners leftdiv">
-
-            <table style="width:100%;">
-
-                <tr><td><div class="label">Name</div></td></tr>
-                <tr><td><input type="text" id="namefilter" style="width:124px" /></td></tr>
-
-                <tr><td><div class="label">Atomic Number</div></td></tr>
-                <tr><td><input type="number" id="atomicnumberfilter" style="width:124px" min=1 max=118 /></td></tr>
-
-                <tr><td><div class="label">Symbol</div></td></tr>
-                <tr><td><input type="text" id="symbolfilter" style="width:124px" /></td></tr>
-
-                <tr>
-                    <td><label for="categoryfilter" class="label">Category</label></td>
-                </tr>
-                <tr>
-                    <td>
-                        <select id="categoryfilter">
-                            <option value=""></option>
-                            <option value="Alkali metal">Alkali metal</option>
-                            <option value="Alkaline earth metal">Alkaline earth metal</option>
-                            <option value="Lanthanide">Lanthanide</option>
-                            <option value="Actinide">Actinide</option>
-                            <option value="Transition metal">Transition metal</option>
-                            <option value="Post-transition metal">Post-transition metal</option>
-                            <option value="Metalloid">Metalloid</option>
-                            <option value="Reactive nonmetal">Reactive nonmetal</option>
-                            <option value="Noble gas">Noble gas</option>
-                            <option value="Unknown">Unknown</option>
-                        </select>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td><label for="groupfilter" class="label">Group</label></td>
-                </tr>
-                <tr>
-                    <td>
-                        <select id="groupfilter">
-                            <option value=""></option>
-                            <option value="0">none</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
-                            <option value="13">13</option>
-                            <option value="14">14</option>
-                            <option value="15">15</option>
-                            <option value="16">16</option>
-                            <option value="17">17</option>
-                            <option value="18">18</option>
-                        </select>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td><label for="periodfilter" class="label">Period</label></td>
-                </tr>
-                <tr>
-                    <td>
-                        <select id="periodfilter">
-                            <option value=""></option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                        </select>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td><label for="blockfilter" class="label">Block</label></td>
-                </tr>
-                <tr>
-                    <td>
-                        <select id="blockfilter">
-                            <option value=""></option>
-                            <option value="d">d</option>
-                            <option value="f">f</option>
-                            <option value="p">p</option>
-                            <option value="s">s</option>
-                        </select>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td colspan="2"><div id="btnApplyFilter" class="button">Apply Filter</div></td>
-                </tr>
-
-                <tr>
-                    <td colspan="2"><div id="btnClearFilter" class="button">Clear Filter</div></td>
-                </tr>
-
-            </table>
-
+        <!-- LEFT SIDEBAR -->
+        <div class="leftdiv" id="leftdiv">
+            <div class="sidebar-section">
+                <span class="sidebar-label">Name</span>
+                <input type="text" id="namefilter" class="sidebar-input" placeholder="e.g. Carbon" />
+            </div>
+            <div class="sidebar-section">
+                <span class="sidebar-label">Atomic Number</span>
+                <input type="number" id="atomicnumberfilter" class="sidebar-input" min="1" max="118" placeholder="1 - 118" />
+            </div>
+            <div class="sidebar-section">
+                <span class="sidebar-label">Symbol</span>
+                <input type="text" id="symbolfilter" class="sidebar-input" placeholder="e.g. Au" />
+            </div>
+            <div class="sidebar-section">
+                <span class="sidebar-label">Category</span>
+                <select id="categoryfilter" class="sidebar-input">
+                    <option value="">All</option>
+                    <option value="Alkali metal">Alkali metal</option>
+                    <option value="Alkaline earth metal">Alkaline earth metal</option>
+                    <option value="Lanthanide">Lanthanide</option>
+                    <option value="Actinide">Actinide</option>
+                    <option value="Transition metal">Transition metal</option>
+                    <option value="Post-transition metal">Post-transition metal</option>
+                    <option value="Metalloid">Metalloid</option>
+                    <option value="Reactive nonmetal">Reactive nonmetal</option>
+                    <option value="Noble gas">Noble gas</option>
+                    <option value="Unknown">Unknown</option>
+                </select>
+            </div>
+            <div class="sidebar-section">
+                <span class="sidebar-label">Group</span>
+                <select id="groupfilter" class="sidebar-input">
+                    <option value="">All</option>
+                    <option value="0">none</option>
+                    <option value="1">1</option><option value="2">2</option><option value="3">3</option>
+                    <option value="4">4</option><option value="5">5</option><option value="6">6</option>
+                    <option value="7">7</option><option value="8">8</option><option value="9">9</option>
+                    <option value="10">10</option><option value="11">11</option><option value="12">12</option>
+                    <option value="13">13</option><option value="14">14</option><option value="15">15</option>
+                    <option value="16">16</option><option value="17">17</option><option value="18">18</option>
+                </select>
+            </div>
+            <div class="sidebar-section">
+                <span class="sidebar-label">Period</span>
+                <select id="periodfilter" class="sidebar-input">
+                    <option value="">All</option>
+                    <option value="1">1</option><option value="2">2</option><option value="3">3</option>
+                    <option value="4">4</option><option value="5">5</option><option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
+            </div>
+            <div class="sidebar-section">
+                <span class="sidebar-label">Block</span>
+                <select id="blockfilter" class="sidebar-input">
+                    <option value="">All</option>
+                    <option value="s">s</option><option value="p">p</option>
+                    <option value="d">d</option><option value="f">f</option>
+                </select>
+            </div>
+            <div class="sidebar-divider"></div>
+            <div id="btnApplyFilter" class="button primary">Apply Filter</div>
+            <div id="btnClearFilter" class="button">Clear Filter</div>
         </div>
 
-        <div id="periodictablediv" class="roundcorners tablediv">
-            <table id="periodictable" style="width: 100%; height: 100%;"></table>
+        <!-- PERIODIC TABLE -->
+        <div class="tablediv">
+            <table id="periodictable"></table>
         </div>
 
-        <div class="roundcorners rightdiv">
-
-            <table style="width:100%;">
-
-                <tr>
-                    <td><div class="label">Color by Block</div></td>
-                </tr>
-                
-                <tr>
-                    <td class="radiobutton"><div class="radiobutton"><input type="radio" name="colorby" value="colorbyblock" id="colorblock" checked /></div></td>
-                </tr>
-
-                <tr>
-                    <td><div class="label">Color by Category</div></td>
-                </tr>
-
-                <tr>
-                    <td class="radiobutton"><div class="radiobutton"><input type="radio" name="colorby" value="colorbycategory" id="colorcategory"  /></div></td>
-                </tr>
-
-            </table>
-
-            <table id="categorykey" style="width:100%; display: inline;">
-                <tr><td><div class="alkalimetal colorkey roundcorners">Alkali metal</div></td></tr>
-                <tr><td><div class="alkalineearthmetal colorkey roundcorners">Alkaline earth metal</div></td></tr>
-                <tr><td><div class="lanthanide colorkey roundcorners">Lanthanide</div></td></tr>
-                <tr><td><div class="actinide colorkey roundcorners">Actinide</div></td></tr>
-                <tr><td><div class="transitionmetal colorkey roundcorners">Transition metal</div></td></tr>
-                <tr><td><div class="posttransitionmetal colorkey roundcorners">Post-transition metal</div></td></tr>
-                <tr><td><div class="metalloid colorkey roundcorners">Metalloid</div></td></tr>
-                <tr><td><div class="reactivenonmetal colorkey roundcorners">Reactive nonmetal</div></td></tr>
-                <tr><td><div class="noblegas colorkey roundcorners">Noble gas</div></td></tr>
-                <tr><td><div class="unknown colorkey roundcorners">Unknown</div></td></tr>
-            </table>
-
-            <table id="blockkey" style="width:100%; display: none;">
-                <tr><td><div class="sblock colorkey roundcorners">s</div></td></tr>
-                <tr><td><div class="dblock colorkey roundcorners">d</div></td></tr>
-                <tr><td><div class="fblock colorkey roundcorners">f</div></td></tr>
-                <tr><td><div class="pblock colorkey roundcorners">p</div></td></tr>
-            </table>
-
+        <!-- RIGHT SIDEBAR -->
+        <div class="rightdiv" id="rightdiv">
+            <div class="sidebar-section">
+                <span class="sidebar-label">Color Mode</span>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="colorby" value="colorbyblock" id="colorblock" checked />
+                        By Block
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="colorby" value="colorbycategory" id="colorcategory" />
+                        By Category
+                    </label>
+                </div>
+            </div>
+            <div class="sidebar-divider"></div>
+            <div class="sidebar-section">
+                <span class="sidebar-label">Legend</span>
+                <div id="blockkey" class="colorkey-list">
+                    <div class="colorkey sblock">s-block</div>
+                    <div class="colorkey dblock">d-block</div>
+                    <div class="colorkey fblock">f-block</div>
+                    <div class="colorkey pblock">p-block</div>
+                </div>
+                <div id="categorykey" class="colorkey-list" style="display:none;">
+                    <div class="colorkey alkalimetal">Alkali metal</div>
+                    <div class="colorkey alkalineearthmetal">Alkaline earth</div>
+                    <div class="colorkey lanthanide">Lanthanide</div>
+                    <div class="colorkey actinide">Actinide</div>
+                    <div class="colorkey transitionmetal">Transition metal</div>
+                    <div class="colorkey posttransitionmetal">Post-transition</div>
+                    <div class="colorkey metalloid">Metalloid</div>
+                    <div class="colorkey reactivenonmetal">Reactive nonmetal</div>
+                    <div class="colorkey noblegas">Noble gas</div>
+                    <div class="colorkey unknown">Unknown</div>
+                </div>
+            </div>
         </div>
 
     </div>
 
-    <div class="horizontal-scroll-menu">
-        <div>Hydrogen</div>
-        <div>Helium</div>
-        <div>Lithium</div>
-        <div>Beryllium</div>
-        <div>Boron</div>
-        <div>Carbon</div>
-        <div>Nitrogen</div>
-        <div>Oxygen</div>
-        <div>Fluorine</div>
-        <div>Neon</div>
-        <div>Sodium</div>
-        <div>Magnesium</div>
-        <div>Aluminum</div>
-        <div>Silicon</div>
-        <div>Phosphorus</div>
-        <div>Sulfur</div>
-        <div>Chlorine</div>
-        <div>Argon</div>  
-        <div>Potassium</div>
-        <div>Calcium</div>
-        <div>Scandium</div>
-        <div>Titanium</div>
-        <div>Vanadium</div>
-        <div>Chromium</div>
-        <div>Manganese</div>
-        <div>Iron</div>
-        <div>Cobalt</div>
-        <div>Nickel</div>
-        <div>Copper</div>
-        <div>Zinc</div>
-        <div>Gallium</div>
-        <div>Germanium</div>
-        <div>Arsenic</div>
-        <div>Selenium</div>
-        <div>Bromine</div>
-        <div>Krypton</div>
-        <div>Rubidium</div>
-        <div>Strontium</div>
-        <div>Yttrium</div>
-        <div>Zirconium</div>
-        <div>Niobium</div>
-        <div>Molybdenum</div>
-        <div>Technetium</div>
-        <div>Ruthenium</div>
-        <div>Rhodium</div>
-        <div>Palladium</div>
-        <div>Silver</div>
-        <div>Cadmium</div>
-        <div>Indium</div>
-        <div>Tin</div>
-        <div>Antimony</div>
-        <div>Tellurium</div>
-        <div>Iodine</div>
-        <div>Xenon</div>
-        <div>Cesium</div>
-        <div>Barium</div>
-        <div>Lanthanum</div>
-        <div>Cerium</div>
-        <div>Praseodymium</div>
-        <div>Neodymium</div>
-        <div>Promethium</div>
-        <div>Samarium</div>
-        <div>Europium</div>
-        <div>Gadolinium</div>
-        <div>Terbium</div>
-        <div>Dysprosium</div>
-        <div>Holmium</div>
-        <div>Erbium</div>
-        <div>Thulium</div>  
-        <div>Ytterbium</div>
-        <div>Lutetium</div>
-        <div>Hafnium</div>
-        <div>Tantalum</div>
-        <div>Tungsten</div>
-        <div>Rhenium</div>
-        <div>Osmium</div>
-        <div>Iridium</div>
-        <div>Platinum</div>
-        <div>Gold</div>
-        <div>Mercury</div>
-        <div>Thallium</div>
-        <div>Lead</div>
-        <div>Bismuth</div>
-        <div>Polonium</div>
-        <div>Astatine</div>
-        <div>Radon</div>
-        <div>Francium</div>
-        <div>Radium</div>
-        <div>Actinium</div>
-        <div>Thorium</div>
-        <div>Protactinium</div>
-        <div>Uranium</div>
-        <div>Neptunium</div>
-        <div>Plutonium</div>
-        <div>Americium</div>
-        <div>Curium</div>
-        <div>Berkelium</div>
-        <div>Californium</div>
-        <div>Einsteinium</div>
-        <div>Fermium</div> 
-        <div>Mendelevium</div>
-        <div>Nobelium</div>
-        <div>Lawrencium</div>
-        <div>Rutherfordium</div>
-        <div>Dubnium</div>
-        <div>Seaborgium</div>
-        <div>Bohrium</div>
-        <div>Hassium</div>
-        <div>Meitnerium</div>
-        <div>Darmstadtium</div>
-        <div>Roentgenium</div>
-        <div>Copernicium</div>
-        <div>Nihonium</div>
-        <div>Flerovium</div>
-        <div>Moscovium</div>
-        <div>Livermorium</div>
-        <div>Tennessine</div>
-        <div>Oganesson</div>        
-    
-    </div>
-
-    <div id="infoboxbackground"
-    style="background-color: #000000; position: absolute;
-    left: 0px; right: 0px; top: 0px; bottom: 0px;
-    opacity: 0.8; visibility: hidden;"></div>
-
-<div id="infobox"
-     class="border roundcorners"
-     style="position:absolute; width: 500px; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #FFFFFF; visibility: hidden; text-align: center;">
-
-    <table style="width:100%;">
-        <tr><th colspan="2" id="infoName" class="thelementname"></th></tr>
-        <tr><td colspan="2">
-            <img id="infoImage" src="" alt="Element Image" style="width:200px;height:auto;display:none;">
-        </td></tr>
-        <tr><td colspan="2"><div id="infoImageText" style="display:none;"></div></td></tr> 
-        <tr><th>Atomic number</th><td id="infoAtomicNumber"></td></tr>
-        <tr><th>Chemical Symbol</th><td id="infoChemicalSymbol"></td></tr>
-        <tr><th>Category</th><td id="infoCategory"></td></tr>
-        <tr><th>Atomic weight - conventional</th><td id="infoAtomicWeightConventional"></td></tr>
-        <tr><th>Atomic weight - standard</th><td id="infoAtomicWeightStandard"></td></tr>
-        <tr><th>Occurrence</th><td id="infoOccurrence"></td></tr>
-        <tr><th>State of matter</th><td id="infoStateOfMatter"></td></tr>
-        <tr><th>Group</th><td id="infoGroup"></td></tr>
-        <tr><th>Period</th><td id="infoPeriod"></td></tr>
-        <tr><th>Block</th><td id="infoBlock"></td></tr>
-        <tr><th>Electron Configuration</th><td id="infoElectronConfiguration"></td></tr> 
-        <tr><th>Valence Electrons</th><td id="infoValenceElectrons"></td></tr> 
-        <tr><td colspan="2"><div id="btnCloseInfoBox" class="button">Close</div></td></tr>
-    </table>
+    <!-- ELEMENT SCROLL BAR -->
+    <div class="horizontal-scroll-menu" id="elementScrollBar"></div>
 
 </div>
 
+<!-- Modal -->
+<div id="infoboxbackground"></div>
+<div id="infobox">
+    <div class="infobox-header">
+        <div class="infobox-title-group">
+            <div class="infobox-symbol" id="infoChemicalSymbol"></div>
+            <div class="infobox-name" id="infoName"></div>
+            <div class="infobox-category-badge" id="infoCategory"></div>
+        </div>
+        <div class="infobox-close" id="btnCloseInfoBox" title="Close (Esc)">&#x2715;</div>
+    </div>
+    <div class="infobox-body">
+        <div class="infobox-image-wrap" id="infoImageWrap" style="display:none;">
+            <img id="infoImage" src="" alt="" loading="lazy" />
+            <div class="infobox-image-caption" id="infoImageText"></div>
+        </div>
+        <div class="infobox-grid">
+            <div class="infobox-field">
+                <div class="infobox-field-label">Atomic Number</div>
+                <div class="infobox-field-value" id="infoAtomicNumber"></div>
+            </div>
+            <div class="infobox-field">
+                <div class="infobox-field-label">State of Matter</div>
+                <div class="infobox-field-value" id="infoStateOfMatter"></div>
+            </div>
+            <div class="infobox-field">
+                <div class="infobox-field-label">Atomic Weight</div>
+                <div class="infobox-field-value" id="infoAtomicWeightConventional"></div>
+            </div>
+            <div class="infobox-field">
+                <div class="infobox-field-label">Occurrence</div>
+                <div class="infobox-field-value" id="infoOccurrence"></div>
+            </div>
+            <div class="infobox-field">
+                <div class="infobox-field-label">Group</div>
+                <div class="infobox-field-value" id="infoGroup"></div>
+            </div>
+            <div class="infobox-field">
+                <div class="infobox-field-label">Period</div>
+                <div class="infobox-field-value" id="infoPeriod"></div>
+            </div>
+            <div class="infobox-field">
+                <div class="infobox-field-label">Block</div>
+                <div class="infobox-field-value" id="infoBlock"></div>
+            </div>
+            <div class="infobox-field">
+                <div class="infobox-field-label">Valence Electrons</div>
+                <div class="infobox-field-value" id="infoValenceElectrons"></div>
+            </div>
+            <div class="infobox-field wide">
+                <div class="infobox-field-label">Atomic Weight (Standard)</div>
+                <div class="infobox-field-value" id="infoAtomicWeightStandard"></div>
+            </div>
+            <div class="infobox-field wide">
+                <div class="infobox-field-label">Electron Configuration</div>
+                <div class="infobox-field-value" id="infoElectronConfiguration"></div>
+            </div>
+        </div>
+    </div>
+</div>
 
-    <script src="data.js"></script>
-    <script src="periodictable.js"></script>
-    <script src="periodictableinfobox.js"></script>
-    <script src="periodictabledisplay.js"></script>
-    <script src="periodictablepage.js"></script>
+<script src="data.js"></script>
+<script src="periodictable.js"></script>
+<script src="periodictableinfobox.js"></script>
+<script src="periodictabledisplay.js"></script>
+<script src="periodictablepage.js"></script>
 
-    <script>
-        let leftDivVisible = true;
-        let rightDivVisible = true;
-
-        function toggleLeftMenu() {
-            let leftDiv = document.querySelector(".leftdiv");
-            let tableDiv = document.querySelector(".tablediv");
-            let leftButton = document.querySelector("#leftToggleButton"); 
-
-            if (leftDivVisible) {
-                leftDiv.style.display = "none";
-                tableDiv.style.left = "10px";
-                leftButton.style.backgroundColor = "green"; 
-            } else {
-                leftDiv.style.display = "block";
-                tableDiv.style.left = "160px";
-                leftButton.style.backgroundColor = ""; 
+<script>
+    // Build scroll bar
+    const elementNames = ["Hydrogen","Helium","Lithium","Beryllium","Boron","Carbon","Nitrogen","Oxygen","Fluorine","Neon","Sodium","Magnesium","Aluminum","Silicon","Phosphorus","Sulfur","Chlorine","Argon","Potassium","Calcium","Scandium","Titanium","Vanadium","Chromium","Manganese","Iron","Cobalt","Nickel","Copper","Zinc","Gallium","Germanium","Arsenic","Selenium","Bromine","Krypton","Rubidium","Strontium","Yttrium","Zirconium","Niobium","Molybdenum","Technetium","Ruthenium","Rhodium","Palladium","Silver","Cadmium","Indium","Tin","Antimony","Tellurium","Iodine","Xenon","Cesium","Barium","Lanthanum","Cerium","Praseodymium","Neodymium","Promethium","Samarium","Europium","Gadolinium","Terbium","Dysprosium","Holmium","Erbium","Thulium","Ytterbium","Lutetium","Hafnium","Tantalum","Tungsten","Rhenium","Osmium","Iridium","Platinum","Gold","Mercury","Thallium","Lead","Bismuth","Polonium","Astatine","Radon","Francium","Radium","Actinium","Thorium","Protactinium","Uranium","Neptunium","Plutonium","Americium","Curium","Berkelium","Californium","Einsteinium","Fermium","Mendelevium","Nobelium","Lawrencium","Rutherfordium","Dubnium","Seaborgium","Bohrium","Hassium","Meitnerium","Darmstadtium","Roentgenium","Copernicium","Nihonium","Flerovium","Moscovium","Livermorium","Tennessine","Oganesson"];
+    const bar = document.getElementById('elementScrollBar');
+    elementNames.forEach(name => {
+        const el = document.createElement('div');
+        el.className = 'scroll-item';
+        el.textContent = name;
+        el.addEventListener('click', () => {
+            document.getElementById('namefilter').value = name;
+            if (window.APP && APP.periodictable) {
+                APP.periodictable.ApplyFilter({ name, atomicnumber:'', symbol:'', category:'', group:'', period:'', block:'' });
             }
-            leftDivVisible = !leftDivVisible;
-        }
+        });
+        bar.appendChild(el);
+    });
 
-        function toggleRightMenu() {
-            let rightDiv = document.querySelector(".rightdiv");
-            let tableDiv = document.querySelector(".tablediv");
-            let rightButton = document.querySelector("#rightToggleButton"); 
-
-            if (rightDivVisible) {
-                rightDiv.style.display = "none";
-                tableDiv.style.right = "10px";
-                rightButton.style.backgroundColor = "green"; 
-            } else {
-                rightDiv.style.display = "block";
-                tableDiv.style.right = "160px";
-                rightButton.style.backgroundColor = ""; 
-            }
-            rightDivVisible = !rightDivVisible;
-        }
-    </script>
-
+    // Sidebar toggles
+    function toggleLeftMenu() {
+        document.getElementById('leftdiv').classList.toggle('collapsed');
+        document.getElementById('leftToggleButton').classList.toggle('active');
+    }
+    function toggleRightMenu() {
+        document.getElementById('rightdiv').classList.toggle('collapsed');
+        document.getElementById('rightToggleButton').classList.toggle('active');
+    }
+</script>
 </body>
-
 </html>
